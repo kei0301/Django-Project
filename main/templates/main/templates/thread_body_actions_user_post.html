@@ -1,0 +1,115 @@
+{% load static %}
+
+<!-- ===============================================-->
+<!--    thread_body_actions_user_post starts here -->
+<!-- ===============================================-->
+
+<div class="card mb-2">
+    <div class="d-flex align-items-center pr-6 flex-grow-1">
+
+        <div class="d-flex flex-column flex-grow-1">
+            <div class="p-6">
+                <div class="d-flex align-items-center">
+
+                    <a href="" class="symbol symbol-40 symbol-circle symbol-xl-40 dropdown" data-toggle="dropdown" data-offset="40px 10px" data-placement="right">
+                        <div class="symbol-label" style="background-image:url( '/static/assets/media/a-team/04.jpg')">
+                        </div>
+                    </a>
+
+                    <!-- ===============================================-->
+                    <!--    thread_body_actions_user starts here -->
+                    <!-- ===============================================-->
+
+                    {% include "main/templates/thread_body_actions_user.html" %}
+
+                    <!-- ===============================================-->
+                    <!--    thread_body_actions_user ends here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column text-left ml-4">
+                        <span class="text-dark font-weight-bolder font-size-md">FName, <span class="text-muted font-weight-bold">$username</span></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--    back_icon starts here -->
+
+        <div class="topbar-item mr-4">
+            <a href="" class="">
+                <span class="btn btn-icon btn-circle btn-light-warning">
+            <span class="svg-icon svg-icon-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon points="0 0 24 0 24 24 0 24"/>
+                        <rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1"/>
+                        <path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) "/>
+                    </g>
+                </svg>
+            </span>
+                </span>
+            </a>
+        </div>
+
+        <!--    back_icon ends here -->
+
+        <!--    flag_icon starts here -->
+
+        <div class="topbar-item mr-4" data-offset="0px 8px" data-toggle="tooltip" data-placement="top" title="">
+            <a href="" data-toggle="modal" data-target="#flagModal">
+                <span class="btn btn-icon btn-circle btn-light-primary">
+        <span class="svg-icon svg-icon-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24"/>
+                    <rect fill="#000000" opacity="0.3" transform="translate(6.000000, 11.000000) rotate(-180.000000) translate(-6.000000, -11.000000) " x="5" y="5" width="2" height="12" rx="1"/>
+                    <path d="M8.29289322,14.2928932 C8.68341751,13.9023689 9.31658249,13.9023689 9.70710678,14.2928932 C10.0976311,14.6834175 10.0976311,15.3165825 9.70710678,15.7071068 L6.70710678,18.7071068 C6.31658249,19.0976311 5.68341751,19.0976311 5.29289322,18.7071068 L2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 C2.68341751,13.9023689 3.31658249,13.9023689 3.70710678,14.2928932 L6,16.5857864 L8.29289322,14.2928932 Z" fill="#000000" fill-rule="nonzero"/>
+                    <rect fill="#000000" opacity="0.3" transform="translate(18.000000, 13.000000) scale(1, -1) rotate(-180.000000) translate(-18.000000, -13.000000) " x="17" y="7" width="2" height="12" rx="1"/>
+                    <path d="M20.2928932,5.29289322 C20.6834175,4.90236893 21.3165825,4.90236893 21.7071068,5.29289322 C22.0976311,5.68341751 22.0976311,6.31658249 21.7071068,6.70710678 L18.7071068,9.70710678 C18.3165825,10.0976311 17.6834175,10.0976311 17.2928932,9.70710678 L14.2928932,6.70710678 C13.9023689,6.31658249 13.9023689,5.68341751 14.2928932,5.29289322 C14.6834175,4.90236893 15.3165825,4.90236893 15.7071068,5.29289322 L18,7.58578644 L20.2928932,5.29289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(18.000000, 7.500000) scale(1, -1) translate(-18.000000, -7.500000) "/>
+                </g>
+            </svg>
+        </span>
+                </span>
+            </a>
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions_user_post_flag starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/thread_body_actions_user_post_flag.html" %}
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions_user_post_flag ends here -->
+            <!-- ===============================================-->
+
+        </div>
+
+        <!--    flag_icon ends here -->
+
+        <!--    next_icon starts here -->
+
+        <div class="topbar-item mr-0">
+            <a href="" class="">
+                <span class="btn btn-icon btn-circle btn-light-danger">
+            <span class="svg-icon svg-icon-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon points="0 0 24 0 24 24 0 24"/>
+                        <rect fill="#000000" opacity="0.3" transform="translate(8.500000, 12.000000) rotate(-90.000000) translate(-8.500000, -12.000000) " x="7.5" y="7.5" width="2" height="9" rx="1"/>
+                        <path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "/>
+                    </g>
+                </svg>
+            </span>
+                </span>
+            </a>
+        </div>
+
+        <!--    next_icon ends here -->
+
+    </div>
+</div>
+
+<!-- ===============================================-->
+<!--    thread_body_actions_user_post ends here -->
+<!-- ===============================================-->

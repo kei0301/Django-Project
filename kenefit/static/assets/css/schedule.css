@@ -1,0 +1,19 @@
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show>.btn-secondary.dropdown-toggle {
+    display: flex;
+}
+
+.btn-schedule {
+    display: flex;
+}
+
+button {
+    flex: 1 100%;
+    border-radius: 8px;
+}
+
+label {
+    flex: 1 100%;
+    border-radius: 8px;
+}

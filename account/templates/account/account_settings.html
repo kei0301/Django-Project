@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Account Settings :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+
+        <!-- ===============================================-->
+        <!--    account_form starts here -->
+        <!-- ===============================================-->
+
+        <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+            <div class="d-flex flex-column-fluid flex-center text-center">
+                <div class="login-form login-signup">
+                    <form class="form w-600px" id="">
+
+                        <div class="text-center pb-8">
+                            <img alt="Logo" src="/static/assets/media/a-logos/logo_primary_letter.png" class="max-h-20px" />
+                        </div>
+
+                        <div class="pb-4 pt-lg-0 pb-8">
+                            <h3 class="font-weight-boldest text-dark font-size-h4 display-4">Account Settings
+                            </h3>
+                            <p class="text-muted font-weight-bold font-size-h4">It only takes a few seconds</p>
+                        </div>
+
+                        <!--    account_form starts here -->
+
+                        <div class="row mb-8">
+                            <div class="col-md-12">
+                                <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" disabled placeholder="Email Address" />
+                            </div>
+                        </div>
+                        <div class="row mb-8">
+                            <div class="col-md-6">
+                                <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="password" placeholder="New Password" />
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="password" placeholder="Confirm Password" />
+                            </div>
+                        </div>
+                        <div class="pb-lg-0 pb-5">
+                            <button type="submit" id="" class="btn btn-primary font-weight-boldest font-size-h6 px-8 py-5 btn-block">
+                                SAVE
+                            </button>
+                        </div>
+                        <div class="pt-5">
+                            <span class="text-muted font-weight-bold font-size-h6"><a href="/account/login/">access your
+                                    account</a> / <a href="/account/reset/">reset
+                                    your password</a>
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+            <!-- ===============================================-->
+            <!--    footer starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/footer.html" %}
+
+            <!-- ===============================================-->
+            <!--    footer ends here -->
+            <!-- ===============================================-->
+
+        </div>
+
+        <!-- ===============================================-->
+        <!--    account_form ends here -->
+        <!-- ===============================================-->
+
+    </div>
+</div>
+
+</html>

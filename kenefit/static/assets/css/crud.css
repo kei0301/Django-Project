@@ -1,0 +1,52 @@
+
+#reloader{
+
+	position:absolute;
+	background-color: black;
+	width:100%;
+	height:100%;
+	background-color: var(--primary);
+	color: var(--white);
+	z-index: 1;
+
+}
+
+.card .mainCard{z-index: 3; background-color: var(--white);}
+.card:hover .mainCard{z-index: -3;}
+
+#reloader .refresh, #reloader .del{
+
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	font-size:1.5rem;
+	cursor: pointer;
+	color: var(--white);
+
+}
+
+#reloader .del{
+
+	top:10%;
+	left:80%;
+	transform:translate(0%, 0%);
+
+}
+
+#reloader .dataUrl{
+
+	position:absolute;
+	bottom:20%;
+	left: 50%;
+	transform:translateX(-50%);
+	text-align:center;
+	color: var(--white);
+
+}
+
+#reloader .config{
+
+	color: var(--white);
+
+}

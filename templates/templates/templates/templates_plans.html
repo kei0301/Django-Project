@@ -1,0 +1,187 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Plans :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-row flex-column-fluid page">
+        <div class="d-flex flex-column flex-row-fluid bg-white" id="kt_wrapper">
+
+            <!-- ===============================================-->
+            <!--    navbar starts here -->
+            <!-- ===============================================-->
+
+            <div class="bg-white text-center pt-30">
+                <div class="">
+                    <img alt="Logo" src="/static/assets/media/a-logos/logo_primary_letter.png" class="max-h-20px" />
+                </div>
+            </div>
+
+            <!-- ===============================================-->
+            <!--    navbar ends here -->
+            <!-- ===============================================-->
+
+            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+
+                <div class="d-flex flex-column-fluid bg-white pt-10 pb-20 px-20">
+                    <div class="container">
+
+                        <!-- ===============================================-->
+                        <!--    account_plan starts here -->
+                        <!-- ===============================================-->
+
+                        <blockquote class="blockquote text-center mb-10">
+                            <h2 class="mb-0 display-2 text-dark font-weight-boldest">45,058 marketers
+                                <br>are already ahead of you </h2>
+                        </blockquote>
+
+                        <div class="d-flex flex-column-fluid">
+                            <div class="container">
+                                <div class="">
+                                    <div class="py-0">
+
+                                        <div class="tab-content">
+
+                                            <!-- account_plan_table starts here -->
+
+                                            <div class="tab-pane show active row text-center" id="kt_pricing_1" role="tabpanel">
+                                                <div class="row">
+                                                    <div class="col-xl-4 border-right-0 border-right-xl border-bottom border-bottom-xl-0">
+                                                        <div class="py-20 px-10 px-lg-10">
+                                                            <div class="d-flex flex-column flex-center text-center pt-10">
+                                                                <h4 class="font-size-h6 d-block d-block font-weight-bold text-dark-50 pb-5">
+                                                                    Platform</h4>
+                                                                <div class="d-flex justify-content-center pb-2">
+                                                                    <span class="font-weight-bolder display-4 text-dark-75 align-self-center">£300</span>
+                                                                </div>
+                                                                <span class="text-muted font-weight-bold font-size-sm mb-8">PER
+                                                                    MONTH</span>
+                                                                <span class="label label-light-success label-inline font-weight-bolder label-lg mb-10">BEST FOR AGENCIES</span>
+                                                                <ul class="list-unstyled text-muted mb-10">
+                                                                    <li>Add 2 Custom Domains</li>
+                                                                    <div class="separator separator-dashed my-5"></div>
+                                                                    <li>Create 4 Automated Templates</li>
+                                                                    <div class="separator separator-dashed my-5"></div>
+                                                                    <li>Host 20,000 Dynamic Landing Pages</li>
+                                                                </ul>
+                                                                <a href='/templates/plans/checkout/' target="_blank" class="btn btn-primary text-uppercase font-weight-boldest px-16 py-4 select_plan">SELECT</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 border-right-0 border-right-xl border-bottom border-bottom-xl-0">
+                                                        <div class="py-20 px-10 px-lg-10">
+                                                            <div class="d-flex flex-column flex-center text-center pt-10">
+                                                                <h4 class="font-size-h6 d-block d-block font-weight-bold text-dark-50 pb-5">
+                                                                    Enterprie</h4>
+                                                                <div class="d-flex justify-content-center pb-2">
+                                                                    <span class="font-weight-bolder display-4 text-dark-75 align-self-center">£500</span>
+                                                                </div>
+                                                                <span class="text-muted font-weight-bold font-size-sm mb-8">PER
+                                                                    MONTH</span>
+                                                                <span class="label label-light-danger label-inline font-weight-bolder label-lg mb-10">BEST FOR MARKETPLACES</span>
+                                                                <ul class="list-unstyled text-muted mb-10">
+                                                                    <li>Add 8 Custom Domains</li>
+                                                                    <div class="separator separator-dashed my-5"></div>
+                                                                    <li>Create 4 Automated Templates</li>
+                                                                    <div class="separator separator-dashed my-5"></div>
+                                                                    <li>Host 200,000 Dynamic Landing Pages</li>
+                                                                </ul>
+                                                                <a href='/templates/plans/checkout/' target="_blank" class="btn btn-primary text-uppercase font-weight-boldest px-16 py-4 select_plan">SELECT</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <div class="py-20 px-10 px-lg-10">
+                                                            <div class="d-flex flex-column flex-center text-center pt-10">
+                                                                <h4 class="font-size-h6 d-block d-block font-weight-bold text-dark-50 pb-5">
+                                                                    Business</h4>
+                                                                <div class="d-flex justify-content-center pb-2">
+                                                                    <span class="font-weight-bolder display-4 text-dark-75 align-self-center">£400</span>
+                                                                </div>
+                                                                <span class="text-muted font-weight-bold font-size-sm mb-8">PER
+                                                                    MONTH</span>
+                                                                <span class="label label-light-info label-inline font-weight-bolder label-lg mb-10">BEST FOR ECOMMERCE</span>
+                                                                <ul class="list-unstyled text-muted mb-10">
+                                                                    <li>Add 4 Custom Domains</li>
+                                                                    <div class="separator separator-dashed my-5"></div>
+                                                                    <li>Create 8 Automated Templates</li>
+                                                                    <div class="separator separator-dashed my-5"></div>
+                                                                    <li>Host 40,000 Dynamic Landing Pages</li>
+                                                                </ul>
+                                                                <a href='/templates/plans/checkout/' target="_blank" class="btn btn-primary text-uppercase font-weight-boldest px-16 py-4 select_plan">SELECT</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- account_plan_table ends here -->
+
+                                            <!-- ===============================================-->
+                                            <!--    account_alert starts here -->
+                                            <!-- ===============================================-->
+
+                                            <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden pt-20 pb-10 mx-auto">
+                                                <div class="d-flex flex-column-fluid flex-center text-center">
+                                                    <div class="login-form login-signup">
+                                                        <form class="form w-950px" id="">
+                                                            <div class="pb-4 pt-lg-0 pt-0">
+                                                                <h3 class="font-weight-boldest text-dark font-size-h4 display-2">Why being an Enterprise Customer matters.</h3>
+                                                                <p class="text-muted font-weight-bold font-size-h4">FName, it pays to be an Enterprise Customer because you will be assigned a 24/7 dedicated account executive that will help you with <u>enterprise</u>
+                                                                    <code>keyword research</code>, <code>content strategy</code>, and <code>template optimization</code>.
+                                                                </p>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ===============================================-->
+                                            <!--    account_alert ends here -->
+                                            <!-- ===============================================-->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ===============================================-->
+                        <!--    account_plans ends Here -->
+                        <!-- ===============================================-->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ===============================================-->
+<!--    footer starts here -->
+<!-- ===============================================-->
+
+{% include "main/templates/footer.html" %}
+
+<!-- ===============================================-->
+<!--    footer ends here -->
+<!-- ===============================================-->
+
+</body>
+
+</html>

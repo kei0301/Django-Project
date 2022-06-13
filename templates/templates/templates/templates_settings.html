@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Template Settings :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-row flex-column-fluid page bg-light">
+        <div class="d-flex flex-column flex-row-fluid" id="">
+
+            <!-- ===============================================-->
+            <!--    form_content starts here -->
+            <!-- ===============================================-->
+
+            <form autocomplete="on" method="POST">
+                {% csrf_token %}
+                <div class="d-flex flex-column-fluid bg-white pt-20">
+                    <div class="container text-center">
+                        <div class="d-flex flex-column-fluid flex-center text-center">
+                            <div class="form w-800px">
+                                <div class="text-center pb-8">
+                                    <img alt="Logo" src="/static/assets/media/a-logos/logo_primary_letter.png" class="max-h-20px" />
+                                </div>
+                                <div class="pb-4 pt-lg-0 pb-8">
+                                    <h3 class="font-weight-boldest text-dark font-size-h4 display-4">Template Settings
+                                    </h3>
+                                    <p class="text-muted font-weight-bold font-size-h4">It only takes a few seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column-fluid bg-white pb-20">
+                    <div class="container text-center">
+                        <div class="d-flex flex-column-fluid flex-center text-center">
+                            <div class="form w-800px">
+                                <div class="pb-4 px-20">
+                                    <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Your business name, logo, headline, description, address, website, CTA, email, and phone will be <code>publicly displayed</code> on your pages. The logo should be a URL from a CDN.
+                                    </p>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Business Name" name="bName" value="{{data.bName}}" />
+                                    </div>
+                                    <div class="col-md-6-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="url" placeholder="Business Logo URL" name="bLogo" value="{{data.bLogo}}"/>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-12-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Business Headline" name="bHead" value="{{data.bHead}}"/>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-12-goat">
+                                        <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Business Description" maxlength="250" rows="3" name="bDesc">{{data.bDesc}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-12-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Business Address" name="bLocation" value="{{data.bLocation}}"/>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="url" placeholder="Business Website" name="bSite" value="{{data.bSite}}"/>
+                                    </div>
+                                    <div class="col-md-6-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Business CTA" name="bCTA" value="{{data.bCTA}}"/>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="email" placeholder="Business Email" name="bMail" value="{{data.bMail}}"/>
+                                    </div>
+                                    <div class="col-md-6-goat">
+                                        <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="tel" placeholder="Business Phone" name="bPhone" value="{{data.bPhone}}"/>
+                                    </div>
+                                </div>
+                                <div class="pt-0">
+                                    <button type="submit" class="btn btn-primary font-weight-boldest font-size-h6 px-8 py-5 btn-block">SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- ===============================================-->
+            <!--    form_content ends here -->
+            <!-- ===============================================-->
+
+            <!-- ===============================================-->
+            <!--    footer starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/footer.html" %}
+
+            <!-- ===============================================-->
+            <!--    footer ends here -->
+            <!-- ===============================================-->
+
+            <!-- ===============================================-->
+            <!--    script starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/script.html" %}
+
+            <!-- ===============================================-->
+            <!--    script ends here -->
+            <!-- ===============================================-->
+
+            </body>
+
+</html>

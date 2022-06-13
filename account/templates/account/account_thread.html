@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Thread :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-row flex-column-fluid page bg-light">
+        <div class="d-flex flex-column flex-row-fluid" id="">
+
+            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                <div class="d-flex flex-column-fluid">
+                    <div class="container">
+                        <div class="d-flex flex-row">
+                            <div class="flex-row-fluid lg-12">
+                                <div class="row">
+
+                                    <!-- ===============================================-->
+                                    <!--    column_left starts here -->
+                                    <!-- ===============================================-->
+
+                                    {% include "main/templates/column_left.html" %}
+
+                                    <!-- ===============================================-->
+                                    <!--    column_left ends here -->
+                                    <!-- ===============================================-->
+
+                                    <!-- ===============================================-->
+                                    <!--    thread starts here -->
+                                    <!-- ===============================================-->
+
+                                    {% include "main/templates/thread.html" %}
+
+                                    <!-- ===============================================-->
+                                    <!--    thread ends here -->
+                                    <!-- ===============================================-->
+
+                                    <!-- ===============================================-->
+                                    <!--    column_right starts here -->
+                                    <!-- ===============================================-->
+
+                                    {% include "main/templates/column_right.html" %}
+
+                                    <!-- ===============================================-->
+                                    <!--    column_right ends here -->
+                                    <!-- ===============================================-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ===============================================-->
+<!--    floater starts here -->
+<!-- ===============================================-->
+
+{% include "main/templates/floater.html" %}
+
+<!-- ===============================================-->
+<!--    floater ends here -->
+<!-- ===============================================-->
+
+<!-- ===============================================-->
+<!--    script starts here -->
+<!-- ===============================================-->
+
+{% include "main/templates/script.html" %}
+
+<!-- ===============================================-->
+<!--    script ends here -->
+<!-- ===============================================-->
+
+</html>

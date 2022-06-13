@@ -1,0 +1,264 @@
+{% load static %}
+
+<!-- ===============================================-->
+<!--    column_center starts here -->
+<!-- ===============================================-->
+
+<div class="col-md-6">
+    <div class="flex-row-auto" id="">
+        <div class="scroll scroll-pull" data-sticky="" data-margin-top="100" data-wheel-propagation="true">
+
+            <div class="card mb-2">
+                <div class="d-flex align-items-center pr-6 flex-grow-1">
+                    <div class="d-flex flex-column flex-grow-1">
+                        <div class="p-6">
+                            <div class="d-flex align-items-center">
+                                <div class="symbol symbol-40 symbol-circle symbol-xl-40">
+                                    <div class="symbol-label" data-toggle="tooltip" title="Shawn" style="background-image:url('/static/assets/media/team/_adrea.png')">
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column text-left ml-4">
+                                    <span class="text-dark font-weight-bolder font-size-lg">John, <span class="text-muted font-weight-bold">you can save the world</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--    my_content starts here -->
+
+                    <div class="topbar-item mr-4">
+                        <a href="" class="" data-toggle="tooltip" title="My Content">
+                            <span class="btn btn-icon btn-circle btn-light-warning">
+                                <span class="svg-icon svg-icon-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                                        viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <path
+                                                d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z"
+                                                fill="#000000" opacity="0.3" />
+                                            <path
+                                                d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z"
+                                                fill="#000000" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!--    my_content ends here -->
+
+                    <!--    new_content starts here -->
+
+                    <div class="topbar-item mr-4">
+                        <div class="">
+                            <a href="" class="btn btn-icon btn-circle btn-primary" data-toggle="modal" data-target="#newContentModal">
+                                <span class="svg-icon svg-icon-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                                        viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <path
+                                                d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z"
+                                                fill="#000000" opacity="0.3" />
+                                            <path
+                                                d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z"
+                                                fill="#000000" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="modal fade" id="newContentModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-20">
+                                            <div data-scroll="true" data-height="auto">
+                                                <div class="mt-0 text-center">
+                                                    <span class="text-dark font-weight-bolder font-size-h2">Save the World
+                                                    </span>
+                                                </div>
+                                                <div class="text-muted font-weight-bold font-size-md mb-4 text-center">
+                                                    create contents that impact lives</div>
+                                                <div class="my-8">
+                                                    <div class="row justify-content-center">
+                                                        <span class="image-input image-input-outline mx-2" id="kt_user_add_avatar">
+                                                            <div class="image-input-wrapper" style="background-image: url(/static/assets/media/a-team/01.jpg)"></div>
+                                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="Image">
+                                                                        <i class="fa fa-pen icon-sm text-muted"></i>
+                                                                        <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
+                                                                        <input type="hidden" name="profile_avatar_remove" />
+                                                                    </label>
+                                                            </span>
+                                                        <span class="image-input image-input-outline mx-2" id="kt_user_add_avatar">
+                                                                <div class="image-input-wrapper" style="background-image: url(/static/assets/media/a-team/01.jpg)"></div>
+                                                                <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="GIF">
+                                                                            <i class="fa fa-pen icon-sm text-muted"></i>
+                                                                            <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
+                                                                            <input type="hidden" name="profile_avatar_remove" />
+                                                                        </label>
+                                                                </span>
+                                                        <span class="image-input image-input-outline mx-2" id="kt_user_add_avatar">
+                                                                    <div class="image-input-wrapper" style="background-image: url(/static/assets/media/a-team/01.jpg)"></div>
+                                                                    <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="Video">
+                                                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                                                <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
+                                                                                <input type="hidden" name="profile_avatar_remove" />
+                                                                            </label>
+                                                                    </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-0 justify-content-center">
+                                                    <div class="text-center mt-0">
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            ABUSE</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                AGING</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    AIR</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            ANIMAL</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                BIODIVERSITY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    BULLYING</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            CLIMATE</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                CONFLICT</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    CORRUPTION</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            CYBERSECURITY</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            DEBT</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                DEFORESTATION</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    DEMOCRATIZATION</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            DESERTIFICATION</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                DISCRIMINATION</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    DISEASES</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            DISPLACEMENT</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                DIVERSITY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    ECOSYSTEM</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            EDUCATION</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            EXPLOITATION</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                FEMINISM</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    FOOD</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            GENDER</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                HEALTHCARE</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    HOMELESSNESS</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            HUNGER</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                INEQUALITY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    INJUSTICE</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            INSECURITY</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            LITERACY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                MALNUTRITION</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    MISINFORMATION</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            MORTALITY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                OBESITY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    OVERPOPULATION</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            POLLUTION</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                POVERTY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    PRIVACY</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            RACISM</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            RIGHTS</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                ROBOTICS</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    SAFETY</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            SEXISM</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                SUSTAINABILITY</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    UNEMPLOYMENT</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            VIOLENCE</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                WASTE</span> <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                                    WATER</span>
+                                                        <span class="m-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                            WELFARE</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--    new_content ends here -->
+
+                    <!--    all_content starts here -->
+
+                    <div class="topbar-item mr-0">
+                        <a href="" class="" data-toggle="tooltip" title="All Content">
+                            <span class="btn btn-icon btn-circle btn-light-danger">
+                                <span class="svg-icon svg-icon-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                                        viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24" />
+                                            <path
+                                                d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z"
+                                                fill="#000000" opacity="0.3" />
+                                            <path
+                                                d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z"
+                                                fill="#000000" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!--    all_content ends here -->
+
+                </div>
+            </div>
+
+            <div class="card mb-2">
+                <div class="card-body p-8">
+                    <div class="row mb-0">
+                        <a href="#" class="col-xl-12 text-center">
+                            <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-0" style="background-image: url(/static/assets/media/gif/ad.gif)"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-2">
+                <div class="card-body p-8">
+                    <div class="row mb-0">
+                        <a href="#" class="col-xl-12 text-center">
+                            <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-0" style="background-image: url(static/assets/media/a-topics/04.jpg)"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-2">
+                <div class="card-body p-8">
+                    <div class="row mb-0">
+                        <a href="#" class="col-xl-12 text-center">
+                            <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-0" style="background-image: url(/static/assets/media/gif/ad.gif)"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ===============================================-->
+<!--    column_center ends here -->
+<!-- ===============================================-->

@@ -1,0 +1,142 @@
+{% load static %}
+
+<!-- ===============================================-->
+<!--    thread_body_actions_user_post_flag starts here -->
+<!-- ===============================================-->
+
+<div class="modal fade" id="flagModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-20">
+                <div data-scroll="true" data-height="auto">
+                    <div class="text-center">
+                        <div class="symbol symbol-50 symbol-circle symbol-xl-50">
+                            <div class="symbol-label" style="background-image:url( '/static/assets/media/a-team/13.jpg')">
+                            </div>
+                            <i class="symbol-badge bg-warning"></i>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-dark font-weight-bolder font-size-h4">FName LName
+									</span>
+                        </div>
+                        <div class="text-dark-50 font-weight-bold font-size-lg">
+                            $username</div>
+                        <div class="text-dark-50 font-weight-bold font-size-h4 mt-4">
+                            viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus.</div>
+                    </div>
+                    <div class="row justify-content-center my-2">
+                        <div class="card-stretch text-center">
+                            <div id="stats-widget-slider-2" class="carousel slide" data-ride="carousel" data-interval="8000">
+                                <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                    <div class="pt-4">
+                                        <a href="#stats-widget-slider-2" class="btn btn-icon btn-light btn-sm mr-1" role="button" data-slide="prev">
+                                            <span class="svg-icon svg-icon-md">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                    <polygon points="0 0 24 0 24 24 0 24" />
+                                                                    <path d="M6.70710678,15.7071068 C6.31658249,16.0976311 5.68341751,16.0976311 5.29289322,15.7071068 C4.90236893,15.3165825 4.90236893,14.6834175 5.29289322,14.2928932 L11.2928932,8.29289322 C11.6714722,7.91431428 12.2810586,7.90106866 12.6757246,8.26284586 L18.6757246,13.7628459 C19.0828436,14.1360383 19.1103465,14.7686056 18.7371541,15.1757246 C18.3639617,15.5828436 17.7313944,15.6103465 17.3242754,15.2371541 L12.0300757,10.3841378 L6.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-12.000003, -11.999999)" />
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                        </a>
+                                        <a href="#stats-widget-slider-2" class="btn btn-icon btn-light btn-sm" role="button" data-slide="next">
+                                            <span class="svg-icon svg-icon-md">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                    <polygon points="0 0 24 0 24 24 0 24" />
+                                                                    <path d="M6.70710678,15.7071068 C6.31658249,16.0976311 5.68341751,16.0976311 5.29289322,15.7071068 C4.90236893,15.3165825 4.90236893,14.6834175 5.29289322,14.2928932 L11.2928932,8.29289322 C11.6714722,7.91431428 12.2810586,7.90106866 12.6757246,8.26284586 L18.6757246,13.7628459 C19.0828436,14.1360383 19.1103465,14.7686056 18.7371541,15.1757246 C18.3639617,15.5828436 17.7313944,15.6103465 17.3242754,15.2371541 L12.0300757,10.3841378 L6.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000003, 11.999999) rotate(-270.000000) translate(-12.000003, -11.999999)" />
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-inner mt-6">
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <h3 class="font-size-h4 text-dark-75 text-hover-primary font-weight-bold cursor-pointer">How suspicious, spammy, or fake is the post?</h3>
+                                            <div class="text-center mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-12 btn-schedule">
+                                                        <button class="btn btn-light-warning font-weight-bolder font-size-sm mr-2">10</button>
+                                                        <button class="btn btn-light-info font-weight-bolder font-size-sm mr-2">15</button>
+                                                        <button class="btn btn-light-danger font-weight-bolder font-size-sm">20</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <h3 class="font-size-h4 text-dark-75 text-hover-primary font-weight-bold cursor-pointer">How violent, harmful, or abusive is the post?</h3>
+                                            <div class="text-center mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-12 btn-schedule">
+                                                        <button class="btn btn-light-warning font-weight-bolder font-size-sm mr-2">10</button>
+                                                        <button class="btn btn-light-info font-weight-bolder font-size-sm mr-2">15</button>
+                                                        <button class="btn btn-light-danger font-weight-bolder font-size-sm">20</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <h3 class="font-size-h4 text-dark-75 text-hover-primary font-weight-bold cursor-pointer">How hateful, trolling, or harassing is the post?</h3>
+                                            <div class="text-center mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-12 btn-schedule">
+                                                        <button class="btn btn-light-warning font-weight-bolder font-size-sm mr-2">10</button>
+                                                        <button class="btn btn-light-info font-weight-bolder font-size-sm mr-2">15</button>
+                                                        <button class="btn btn-light-danger font-weight-bolder font-size-sm">20</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <h3 class="font-size-h4 text-dark-75 text-hover-primary font-weight-bold cursor-pointer">How misleading, fraudulent, or scammy is the post?</h3>
+                                            <div class="text-center mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-12 btn-schedule">
+                                                        <button class="btn btn-light-warning font-weight-bolder font-size-sm mr-2">10</button>
+                                                        <button class="btn btn-light-info font-weight-bolder font-size-sm mr-2">15</button>
+                                                        <button class="btn btn-light-danger font-weight-bolder font-size-sm">20</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <h3 class="font-size-h4 text-dark-75 text-hover-primary font-weight-bold cursor-pointer">How infringing, defamatory, or damaging is the post?</h3>
+                                            <div class="text-center mt-2">
+                                                <div class="row">
+                                                    <div class="col-xl-12 btn-schedule">
+                                                        <button class="btn btn-light-warning font-weight-bolder font-size-sm mr-2">10</button>
+                                                        <button class="btn btn-light-info font-weight-bolder font-size-sm mr-2">15</button>
+                                                        <button class="btn btn-light-danger font-weight-bolder font-size-sm">20</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary font-weight-bolder font-size-lg px-8 mt-4">FLAG</button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===============================================-->
+<!--    thread_body_actions_user_post_flag ends here -->
+<!-- ===============================================-->

@@ -1,0 +1,235 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Folders :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-row flex-column-fluid page bg-light">
+        <div class="d-flex flex-column flex-row-fluid" id="kt_wrapper">
+
+            <!-- ===============================================-->
+            <!--    subnavbar starts here -->
+            <!-- ===============================================-->
+
+            <style>
+                .vl {
+                    border-left: 1px solid #EBEDF3;
+                    height: 54px;
+                }
+            </style>
+
+            <div class="subheader bg-white h-100px" id="kt_subheader">
+                <div class="container flex-wrap flex-sm-nowrap">
+
+                    <div class="d-none d-lg-flex align-items-center flex-wrap w-200px">
+
+                        <a href="/">
+                            <img alt="Kenefit Logo" src="/static/assets/media/a-logos/logo_secondary_letter.png" class="max-h-25px" />
+                        </a>
+
+                    </div>
+
+                    <div class="subheader-nav nav flex-grow-1">
+
+                        <a href="/templates/" class="nav-item">
+                            <div class="px-10">
+                                <span class="nav-title text-dark font-weight-bolder font-size-h2 mb-2">{{headcounts.pg}}</span>
+                                <div class="nav-desc text-muted font-weight-bold font-size-sm">TOTAL PAGES</div>
+                            </div>
+                        </a>
+
+                        <a href="/templates/domains/" class="nav-item">
+                            <div class="vl px-10">
+                                <span class="nav-title text-dark font-weight-bolder font-size-h2 mb-2">{{headcounts.dm}}</span>
+                                <div class="nav-desc text-muted font-weight-bold font-size-sm">CUSTOM DOMAINS</div>
+                            </div>
+                        </a>
+
+                        <a href="/templates/files/" class="nav-item">
+                            <div class="vl px-10">
+                                <span class="nav-title text-dark font-weight-bolder font-size-h2 mb-2">{{headcounts.file}}</span>
+                                <div class="nav-desc text-muted font-weight-bold font-size-sm">CSV FILES</div>
+                            </div>
+                        </a>
+
+                        <div class="nav-item active">
+                            <div class="vl px-10">
+                                <span class="nav-title text-dark font-weight-bolder font-size-h2 mb-2">{{headcounts.folder}}</span>
+                                <div class="nav-desc text-muted font-weight-bold font-size-sm">MEDIA FOLDERS</div>
+                            </div>
+                        </div>
+
+                        <a href="/templates/" class="nav-item">
+                            <div class="vl px-10">
+                                <span class="nav-title text-dark font-weight-bolder font-size-h2 mb-2">{{headcounts.tm}}</span>
+                                <div class="nav-desc text-muted font-weight-bold font-size-sm">ALL TEMPLATES</div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ===============================================-->
+            <!--    subnavbar ends here -->
+            <!-- ===============================================-->
+
+            <!-- ===============================================-->
+            <!--    breadcrumb starts here -->
+            <!-- ===============================================-->
+
+            <div class="gutter-b mt-9" id="kt_breadcrumbs">
+                <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                    <div class="d-flex align-items-center flex-wrap mr-1">
+                        <div class="d-flex align-items-baseline flex-wrap mr-5">
+                            <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-0 font-size-sm">
+                                <li class="breadcrumb-item">
+                                    <a href="/" class="text-dark-50">Account</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/templates/" class="text-dark-50">Templates</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="/templates/folders/" class="text-dark-50">Folders</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown dropdown-inline">
+                            <a href="/templates/folders/add/" class="btn btn-fixed-height btn-bg-white btn-text-dark-50 btn-hover-text-primary btn-icon-primary font-weight-bolder font-size-sm px-5 mr-3"  aria-haspopup="true" aria-expanded="false">
+                                Add Folder</a>
+                        </div>
+                        <div class="">
+                            <a href="/templates/plans/" target="_blank" class="btn btn-fixed-height btn-primary font-weight-bolder font-size-sm px-5">
+                               Plans</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===============================================-->
+            <!--    breadcrumb ends here -->
+            <!-- ===============================================-->
+
+            <!-- ===============================================-->
+            <!--    card_content starts here -->
+            <!-- ===============================================-->
+
+            <div class="mt-0 " id="kt_content ">
+                <div class="container ">
+                    <div class="d-flex flex-row ">
+                        <div class="flex-row-fluid ">
+                            {% if data %}
+                            <div class="row ">
+                                {% for i in data %}
+                                <div class="col-xl-3 ">
+                                    <div class="card gutter-b ">
+                                        <a href="{{i.Url}}" target="_blank " class="card-body text-center py-15 mainCard">
+                                            <div class="symbol symbol-50 symbol-white " title="go to the folder link">
+                                                <div class="symbol-label " style="background-image:url( '/static/assets/media/svg/files/jpg.svg') ">
+                                                </div>
+                                            </div>
+                                            <div class="mt-3 ">
+                                                <span class="text-dark font-weight-bolder font-size-h4 ">{{i.folder}}</span>
+                                            </div>
+                                            <span class="label label-light-warning font-weight-bolder label-inline mt-2">{{i.numImg}}</span>
+                                        </a>
+                                        <div class="card-body text-center py-15" id="reloader">
+                                            {% csrf_token %}
+                                            <a data-id="{{i.folder}}^^^^{{i.Url}}" onclick="refrsher('refresh')" id="MrRefresh" class="refresh"><span>Refresh</span></a>
+                                            <a data-id="{{i.folder}}^^^^{{i.Url}}" onclick="refrsher('delete')"  id="MrDel" class="del"><span><img src="{% static 'assets/media/delete_black_24dp.svg' %}" alt=""></span></a>
+                                            <a target="_blank" class="dataUrl" href="{{i.Url}}">(Source Url)</a>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                            <h3>Add Your Images folder First</h3>
+                            {% endif %}   
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===============================================-->
+            <!--    card_content ends here -->
+            <!-- ===============================================-->
+
+        </div>
+    </div>
+</div>
+
+<!-- ===============================================-->
+<!--    floater starts here -->
+<!-- ===============================================-->
+
+{% include "main/templates/floater.html " %}
+
+<!-- ===============================================-->
+<!--    floater ends here -->
+<!-- ===============================================-->
+
+<!-- ===============================================-->
+<!--    footer starts here -->
+<!-- ===============================================-->
+
+{% include "main/templates/footer.html " %}
+
+<!-- ===============================================-->
+<!--    footer ends here -->
+<!-- ===============================================-->
+
+<!-- ===============================================-->
+<!--    script starts here -->
+<!-- ===============================================-->
+
+{% include "main/templates/script.html " %}
+
+<!-- ===============================================-->
+<!--    script ends here -->
+<!-- ===============================================-->
+<script>
+
+async function refrsher(type){
+
+    let id = event.srcElement.parentNode.getAttribute("data-id")
+    if (type == "delete") {
+        id = event.srcElement.parentNode.parentNode.getAttribute("data-id")
+    }
+    let csrf = document.querySelector(`input[name="csrfmiddlewaretoken"]`).value
+    let data = new FormData();
+    data.append('type', type)
+    data.append('id', id)
+    data.append('csrfmiddlewaretoken', csrf)
+    const rawResponse = await fetch(document.location, {
+        method: 'POST',
+        body: data,
+        credentials: 'same-origin',
+    });
+
+    const content = await rawResponse.json();
+
+    location.reload()
+
+};
+
+</script>
+</html>

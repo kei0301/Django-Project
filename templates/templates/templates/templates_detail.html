@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!-- ===============================================-->
+<!-- header starts here -->
+<!-- ===============================================-->
+
+<title>
+    
+    {% if changes.metatitle %}
+    {{changes.metatitle}}
+    {% else %}
+    {{cred.bHead}}
+    {% endif %}
+
+</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!-- header ends here -->
+<!-- ===============================================-->
+
+<body id="kt_body" class="print-content-only header-fixed header-mobile-fixed subheader-enabled page-loading">
+
+    <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-row flex-column-fluid page">
+            <div class="d-flex flex-column flex-row-fluid bg-light-warning" id="kt_wrapper">
+
+                <div class="content d-flex flex-column" id="kt_content">
+
+                    <!-- ===============================================-->
+                    <!-- hero starts here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column-fluid bg-light-warning pt-15 pb-40">
+                        <div class="container">
+
+                            <div class="mb-6 text-center">
+                                <a href="/"> <img src="{{cred.bLogo}}" height="30" alt="image" /> </a>
+
+                                <div class="container d-flex flex-column flex-md-row justify-content-md-center p-4">
+                                    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <a href="#company" class="text-muted">Company</a>
+                                        </li>
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <a href="#products" class="text-muted">Products</a>
+                                        </li>
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <a href="#customers" class="text-muted">Customers</a>
+                                        </li>
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <a href="#solutions" class="text-muted">Solutions</a>
+                                        </li>
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <a href="#packages" class="text-muted">Packages</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <!-- hero_block starts here -->
+                            <blockquote class="blockquote text-center mb-10">
+                                <h2 class="mb-0 display-1 text-dark font-weight-boldest">
+
+                                    {% if changes.title %}
+                                    {{changes.title}}
+                                    {% else %}
+                                    {{staticdata.index.title}}
+                                    {% endif %}
+                                </h2>
+                                <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                                    {% if changes.description %}
+                                    {{changes.description}}
+                                    {% else %}
+                                    {{staticdata.index.description}}
+                                    {% endif %}
+                                </div>
+                                <a href="#" class="btn btn-primary font-weight-boldest btn-lg pull-left btn-shadow mr-2 px-12 py-5">Any
+                                Product CTA</a>
+                                <a href="#" target="_blank" class="btn btn-bg-white btn-secondary font-weight-boldest btn-lg pull-right btn-shadow px-12 py-5">Company
+                                CTA</a>
+                                <div class="container d-flex flex-column flex-md-row justify-content-md-center pt-4">
+                                    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <div class="text-muted">Random Value</div>
+                                        </li>
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <div class="text-muted">Random Value</div>
+                                        </li>
+                                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                                            <div class="text-muted">Random Value</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </blockquote>
+
+                            <!-- hero_block ends here -->
+
+                        </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- hero ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- value_block starts here -->
+                    <!-- ===============================================-->
+
+                    <a id="values">
+                        <div class="d-flex flex-column-fluid bg-white p-40">
+                    </a>
+                    <div class="container">
+                        <div class="text-center">
+                            <span class="label label-light-success label-inline font-weight-bolder mb-8">VALUES</span>
+                        </div>
+                        <blockquote class="blockquote text-center mb-10">
+                            <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.value.title}}
+                            </h2>
+                            <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                                {{staticdata.value.description}}
+                            </div>
+                        </blockquote>
+                        <div class="flex-row-fluid ml-lg-8">
+                            <div class="row">
+                                {% for vl in staticdata.value.values %}
+                                {% if forloop.counter == 1 %}
+                                <div class="col-xl-3 text-center">
+                                    <div class="card card-custom p-10 gutter-b">
+                                        <div class="card-body text-center">
+                                            <div class="symbol symbol-circle symbol-lg-50 mb-3">
+                                                <img src="/static/assets/media/a-values/01.svg" alt="image" />
+                                            </div>
+                                            <div class="text-primary font-weight-bolder font-size-lg">
+                                                {{vl}}
+                                            </div>
+                                            <div class="">
+                                                <span class="label label-light-warning label-inline font-weight-bolder mt-2">ACTIVE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% elif forloop.counter == 2 %}
+                                <div class="col-xl-3 text-center">
+                                    <div class="card card-custom p-10 gutter-b">
+                                        <div class="card-body text-center">
+                                            <div class="symbol symbol-circle symbol-lg-50 mb-3">
+                                                <img src="/static/assets/media/a-values/02.svg" alt="image" />
+                                            </div>
+                                            <div class="text-primary font-weight-bolder font-size-lg">
+                                                {{vl}}
+                                            </div>
+                                            <div class="">
+                                                <span class="label label-light-primary label-inline font-weight-bolder mt-2">ACTIVE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% elif forloop.counter == 3 %}
+                                <div class="col-xl-3 text-center">
+                                    <div class="card card-custom p-10 gutter-b">
+                                        <div class="card-body text-center">
+                                            <div class="symbol symbol-circle symbol-lg-50 mb-3">
+                                                <img src="/static/assets/media/a-values/03.svg" alt="image" />
+                                            </div>
+                                            <div class="text-primary font-weight-bolder font-size-lg">
+                                                {{vl}}
+                                            </div>
+                                            <div class="">
+                                                <span class="label label-light-danger label-inline font-weight-bolder mt-2">ACTIVE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% elif forloop.counter == 4 %}
+                                <div class="col-xl-3 text-center">
+                                    <div class="card card-custom p-10 gutter-b">
+                                        <div class="card-body text-center">
+                                            <div class="symbol symbol-circle symbol-lg-50 mb-3">
+                                                <img src="/static/assets/media/a-values/04.svg" alt="image" />
+                                            </div>
+                                            <div class="text-primary font-weight-bolder font-size-lg">
+                                                {{vl}}
+                                            </div>
+                                            <div class="">
+                                                <span class="label label-light-success label-inline font-weight-bolder mt-2">ACTIVE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- value_block ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- topic_01-block starts here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column-fluid bg-light p-40">
+                        <div class="container">
+
+                            <div class="text-center">
+                                <span class="label label-warning label-inline font-weight-bolder mb-8">{{staticdata.topic1.breadcrumb}}</span>
+                            </div>
+
+                            <!-- topic_01_block starts here -->
+
+                            <blockquote class="blockquote text-center mb-10">
+
+                                <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.topic1.title}}</h2>
+
+                                <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                                    {{staticdata.topic1.blockdescription}}
+                                </div>
+
+                            </blockquote>
+
+                            <!-- topic_01_block ends here -->
+
+                            <div class="flex-row-fluid ml-lg-8">
+
+                                <div class="row mb-10">
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp1.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">
+                                            {{dynamic.tp1.1.description}}</div>
+                                        <span class="label label-danger label-inline font-weight-bolder my-2">{{dynamic.tp1.1.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp1.2.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">
+                                            {{dynamic.tp1.2.description}}</div>
+                                        <span class="label label-info label-inline font-weight-bolder my-2">{{dynamic.tp1.2.label}}</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp1.3.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">
+                                            {{dynamic.tp1.3.description}}</div>
+                                        <span class="label label-success label-inline font-weight-bolder my-2">>{{dynamic.tp1.3.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp1.4.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">
+                                            {{dynamic.tp1.4.description}}</div>
+                                        <span class="label label-warning label-inline font-weight-bolder my-2">>{{dynamic.tp1.4.label}}</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- topic_01 ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- topic_02 starts here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column-fluid bg-light-primary p-40">
+                        <div class="container">
+
+                            <div class="text-center">
+                                <span class="label label-success label-inline font-weight-bolder mb-8">{{staticdata.topic2.breadcrumb}}</span>
+                            </div>
+
+                            <!-- topic_02_block starts here -->
+
+                            <blockquote class="blockquote text-center mb-10">
+
+                                <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.topic2.title}}
+                                </h2>
+
+                                <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                                    {{staticdata.topic2.blockdescription}}
+                                </div>
+
+                            </blockquote>
+
+                            <!-- topic_02_block ends here -->
+
+                            <div class="flex-row-fluid ml-lg-8">
+
+                                <div class="row mb-10">
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp2.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp2.1.description}}</div>
+                                        <span class="label label-danger label-inline font-weight-bolder my-2">{{dynamic.tp2.1.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp2.2.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp2.1.description}}</div>
+                                        <span class="label label-primary label-inline font-weight-bolder my-2">{{dynamic.tp2.2.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp2.3.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp2.1.description}}</div>
+                                        <span class="label label-warning label-inline font-weight-bolder my-2">{{dynamic.tp2.3.label}}</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp2.4.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp2.1.description}}</div>
+                                        <span class="label label-info label-inline font-weight-bolder my-2">{{dynamic.tp2.4.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp2.5.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp2.1.description}}</div>
+                                        <span class="label label-danger label-inline font-weight-bolder my-2">{{dynamic.tp2.5.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp2.6.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp2.1.description}}</div>
+                                        <span class="label label-success label-inline font-weight-bolder my-2">{{dynamic.tp2.6.label}}</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- topic_02 ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- topic_03 starts here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column-fluid bg-white p-40">
+                        <div class="container">
+
+                            <div class="text-center">
+                                <span class="label label-primary label-inline font-weight-bolder mb-8">{{staticdata.topic3.breadcrumb}}</span>
+                            </div>
+
+                            <!-- topic_03_block starts here -->
+
+                            <blockquote class="blockquote text-center mb-10">
+
+                                <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.topic3.title}}</h2>
+
+                                <div class="my-6 font-weight-bold font-size-h4 text-dark-50">{{staticdata.topic3.blockdescription}}</div>
+
+                            </blockquote>
+
+                            <!-- topic_03_block ends here -->
+
+                            <div class="flex-row-fluid ml-lg-8">
+
+                                <div class="row mb-10">
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp3.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp3.1.description}}</div>
+                                        <span class="label label-light-info label-inline font-weight-bolder my-2">{{dynamic.tp3.1.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp3.2.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp3.2.description}}</div>
+                                        <span class="label label-light-danger label-inline font-weight-bolder my-2">{{dynamic.tp3.2.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp3.3.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp3.3.description}}</div>
+                                        <span class="label label-light-success label-inline font-weight-bolder my-2">{{dynamic.tp3.3.label}}</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp3.4.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp3.4.description}}</div>
+                                        <span class="label label-light-danger label-inline font-weight-bolder my-2">{{dynamic.tp3.4.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp3.5.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp3.5.description}}</div>
+                                        <span class="label label-light-info label-inline font-weight-bolder my-2">{{dynamic.tp3.5.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp3.6.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp3.6.description}}</div>
+                                        <span class="label label-light-warning label-inline font-weight-bolder my-2">{{dynamic.tp3.6.label}}</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- topic_03 ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- package starts here -->
+                    <!-- ===============================================-->
+
+                    <a id="packages">
+                        <div class="d-flex flex-column-fluid bg-warning p-40">
+                    </a>
+
+                    <div class="container">
+
+                        <div class="text-center">
+                            <span class="label label-white label-inline font-weight-bolder mb-8">PACKAGES</span>
+                        </div>
+
+                        <!-- package_block starts here -->
+
+                        <blockquote class="blockquote text-center mb-10">
+
+                            <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.packages.title}}
+                            </h2>
+
+                            <div class="my-6 font-weight-bold font-size-h4 text-dark-75">
+                                {{staticdata.packages.description}}
+                            </div>
+
+                            <a href="/{{staticdata.product.slug}}" class="btn btn-primary font-weight-boldest btn-lg pull-left btn-shadow mr-2 px-12 py-5">{{staticdata.packages.productButtonRedirect}}</a>
+
+                            <a href="{{staticdata.packages.productButtonCta}}" target="_blank" class="btn btn-bg-white btn-secondary font-weight-boldest btn-lg pull-right btn-shadow px-12 py-5">Company
+                            CTA</a>
+
+                            <div class="container d-flex flex-column flex-md-row justify-content-md-center pt-4">
+                                <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                                    <li class="breadcrumb-item font-weight-bolder text-muted">
+                                        <div class="text-dark-50">Random Value</div>
+                                    </li>
+                                    <li class="breadcrumb-item font-weight-bolder text-muted">
+                                        <div class="text-dark-50">Random Value</div>
+                                    </li>
+                                    <li class="breadcrumb-item font-weight-bolder text-muted">
+                                        <div class="text-dark-50">Random Value</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </blockquote>
+
+                        <!-- package_block ends here -->
+
+                    </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- package ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- topic_04 starts here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column-fluid bg-light p-40">
+                        <div class="container">
+
+                            <div class="text-center">
+                                <span class="label label-danger label-inline font-weight-bolder mb-8">{{staticdata.topic4.breadcrumb}}</span>
+                            </div>
+
+                            <!-- topic_04_block starts here -->
+
+                            <blockquote class="blockquote text-center mb-10">
+
+                                <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.topic4.title}}</h2>
+
+                                <div class="my-6 font-weight-bold font-size-h4 text-dark-50">{{staticdata.topic4.blockdescription}}</div>
+
+                            </blockquote>
+
+                            <!-- topic_04_block ends here -->
+
+                            <div class="flex-row-fluid ml-lg-8">
+
+                                <div class="row mb-10">
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp4.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp4.1.description}}</div>
+                                        <span class="label label-info label-inline font-weight-bolder my-2">{{dynamic.tp4.1.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp4.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp4.2.description}}</div>
+                                        <span class="label label-warning label-inline font-weight-bolder my-2">{{dynamic.tp4.2.label}}</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp4.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp4.3.description}}</div>
+                                        <span class="label label-danger label-inline font-weight-bolder my-2">{{dynamic.tp4.3.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-6 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp4.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp4.4.description}}</div>
+                                        <span class="label label-success label-inline font-weight-bolder my-2">{{dynamic.tp4.4.label}}</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- topic_04 ends here -->
+                    <!-- ===============================================-->
+
+                    <!-- ===============================================-->
+                    <!-- topic_05 starts here -->
+                    <!-- ===============================================-->
+
+                    <div class="d-flex flex-column-fluid bg-white p-40">
+                        <div class="container">
+
+                            <div class="text-center">
+                                <span class="label label-info label-inline font-weight-bolder mb-8">{{staticdata.topic5.breadcrumb}}</span>
+                            </div>
+
+                            <!-- topic_05_block starts here -->
+
+                            <blockquote class="blockquote text-center mb-10">
+
+                                <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.topic5.title}}</h2>
+
+                                <div class="my-6 font-weight-bold font-size-h4 text-dark-50">{{staticdata.topic5.blockdescription}}</div>
+
+                            </blockquote>
+
+                            <!-- topic_05_block ends here -->
+
+                            <div class="flex-row-fluid ml-lg-8">
+
+                                <div class="row mb-10">
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url(static/assets/media/a-topics/11.jpg)"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp5.1.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp5.1.description}}</div>
+                                        <span class="label label-light-success label-inline font-weight-bolder my-2">{{dynamic.tp5.1.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp5.2.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp5.2.description}}</div>
+                                        <span class="label label-light-warning label-inline font-weight-bolder my-2">{{dynamic.tp5.2.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp5.3.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp5.3.description}}</div>
+                                        <span class="label label-light-primary label-inline font-weight-bolder my-2">{{dynamic.tp5.3.label}}</span>
+                                    </a>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp5.4.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp5.4.description}}</div>
+                                        <span class="label label-light-danger label-inline font-weight-bolder my-2">{{dynamic.tp5.4.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp5.5.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp5.5.description}}</div>
+                                        <span class="label label-light-info label-inline font-weight-bolder my-2">{{dynamic.tp5.5.label}}</span>
+                                    </a>
+
+                                    <a href="#" class="col-xl-4 text-center">
+                                        <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                        <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.tp5.6.name}}</span>
+                                        <div class="text-muted font-weight-bold my-3">{{dynamic.tp5.6.description}}</div>
+                                        <span class="label label-light-warning label-inline font-weight-bolder my-2">{{dynamic.tp5.6.label}}</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ===============================================-->
+                    <!-- topic_05 ends here -->
+                    <!-- ===============================================-->
+
+
+                <!-- ===============================================-->
+                <!-- product_block starts here -->
+                <!-- ===============================================-->
+
+                <a id="products">
+                    <div class="d-flex flex-column-fluid bg-white p-40">
+                </a>
+                <div class="container">
+                    <div class="text-center">
+                        <span class="label label-warning label-inline font-weight-bolder mb-8">PRODUCTS</span>
+                    </div>
+                    <blockquote class="blockquote text-center mb-10">
+                        <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.product.title}}
+                        </h2>
+                        <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                            {{staticdata.product.blockdescription}}
+                        </div>
+                    </blockquote>
+                    <div class="flex-row-fluid ml-lg-8">
+                        <div class="row mb-10">
+                            <a href="#" class="col-xl-4 text-center">
+                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.pdt.1.name}}</span>
+                                <div class="text-muted font-weight-bold my-3">{{dynamic.pdt.1.description}}</div>
+                                <span class="label label-info label-inline font-weight-bolder my-2">{{dynamic.pdt.1.label}}</span>
+                            </a>
+                            <a href="#" class="col-xl-4 text-center">
+                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.pdt.2.name}}</span>
+                                <div class="text-muted font-weight-bold my-3">{{dynamic.pdt.2.description}}</div>
+                                <span class="label label-warning label-inline font-weight-bolder my-2">{{dynamic.pdt.2.label}}</span>
+                            </a>
+                            <a href="#" class="col-xl-4 text-center">
+                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.pdt.3.name}}</span>
+                                <div class="text-muted font-weight-bold my-3">{{dynamic.pdt.3.description}}</div>
+                                <span class="label label-success label-inline font-weight-bolder my-2">{{dynamic.pdt.3.label}}</span>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="#" class="col-xl-4 text-center">
+                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.pdt.4.name}}</span>
+                                <div class="text-muted font-weight-bold my-3">{{dynamic.pdt.4.description}}</div>
+                                <span class="label label-success label-inline font-weight-bolder my-2">{{dynamic.pdt.4.label}}</span>
+                            </a>
+                            <a href="#" class="col-xl-4 text-center">
+                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.pdt.5.name}}</span>
+                                <div class="text-muted font-weight-bold my-3">{{dynamic.pdt.5.description}}</div>
+                                <span class="label label-danger label-inline font-weight-bolder my-2">{{dynamic.pdt.5.label}}</span>
+                            </a>
+                            <a href="#" class="col-xl-4 text-center">
+                                <div class="bgi-no-repeat bgi-size-cover rounded min-h-200px mb-6" style="background-image: url('{{ imgs|random }}');background-fit: cover;"></div>
+                                <span class="text-dark font-weight-bolder font-size-h4">{{dynamic.pdt.6.name}}</span>
+                                <div class="text-muted font-weight-bold my-3">{{dynamic.pdt.6.description}}</div>
+                                <span class="label label-primary label-inline font-weight-bolder my-2">{{dynamic.pdt.6.label}}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- ===============================================-->
+                <!-- product_block ends here -->
+                <!-- ===============================================-->
+
+                <!-- ===============================================-->
+                <!-- faq_block starts here -->
+                <!-- ===============================================-->
+
+                <a id="customers">
+                    <div class="d-flex flex-column-fluid bg-light p-40">
+                </a>
+                <div class="container">
+                    <div class="text-center">
+                        <span class="label label-success label-inline font-weight-bolder mb-8">CUSTOMERS</span>
+                    </div>
+                    <blockquote class="blockquote text-center mb-10">
+                        <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.faq.title}}
+                        </h2>
+                        <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                            {{staticdata.faq.description}}
+                        </div>
+                        <a href="#" class="btn btn-primary font-weight-boldest btn-lg pull-left btn-shadow mr-2 px-12 py-5">Any
+                            Product CTA</a>
+                        <a href="#" target="_blank" class="btn btn-bg-white btn-secondary font-weight-boldest btn-lg pull-right btn-shadow px-12 py-5">Company
+                            CTA</a>
+                        <div class="container d-flex flex-column flex-md-row justify-content-md-center pt-4">
+                            <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </blockquote>
+                    <div class="flex-row-fluid">
+                        <div class="card card-custom gutter-b">
+                            <div class="card-body px-30 py-25">
+                                <div class="accordion accordion-light  accordion-toggle-arrow" id="faqContents">
+                                    {% for q_a in staticdata.faq.q_a %}
+                                    <div class="card">
+                                        <div class="card-header" id="faqHeader{{forloop.counter}}">
+                                            <div class="card-title font-size-h4 collapsed" data-toggle="collapse" data-target="#faqContent{{forloop.counter}}"> {{q_a.q}}
+                                            </div>
+                                        </div>
+                                        <div id="faqContent{{forloop.counter}}" class="collapse {% if forloop.counter == 1 %} show {% endif %}" data-parent="#faqContents">
+                                            <div class="card-body">
+                                                <div class="text-dark-50 font-weight-bold font-size-h5 pb-5">
+                                                    {{q_a.ans}}</div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="symbol symbol-circle symbol-50 mr-5">
+                                            <img src="/static/assets/media/a-faqs/05.jpg" />
+                                            <i class="symbol-badge bg-success"></i>
+                                        </span>
+                                                    <div class="d-flex flex-column text-left">
+                                                        <span class="text-dark font-weight-bolder font-size-lg">{{q_a.customer}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- ===============================================-->
+                <!-- faq_block ends here -->
+                <!-- ===============================================-->
+
+                <!-- ===============================================-->
+                <!-- solution_block starts here -->
+                <!-- ===============================================-->
+
+                <a id="solutions">
+                    <div class="d-flex flex-column-fluid bg-white p-40">
+                </a>
+                <div class="container">
+                    <div class="text-center">
+                        <span class="label label-light-primary label-inline font-weight-bolder mb-8">SOLUTIONS</span>
+                    </div>
+                    <blockquote class="blockquote text-center mb-10">
+                        <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{staticdata.solutions.title}}
+                        </h2>
+                        <div class="my-6 font-weight-bold font-size-h4 text-dark-50">
+                            {{staticdata.solutions.description}}
+                        </div>
+                        <a href="#" class="btn btn-primary font-weight-boldest btn-lg pull-left btn-shadow mr-2 px-12 py-5">Any
+                Product CTA</a>
+                        <a href="#" target="_blank" class="btn btn-bg-white btn-secondary font-weight-boldest btn-lg pull-right btn-shadow px-12 py-5">Company
+                CTA</a>
+                        <div class="container d-flex flex-column flex-md-row justify-content-md-center pt-4">
+                            <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </blockquote>
+                    <div class="flex-row-fluid ml-lg-8">
+                        <div class="row">
+                            {% for i in staticdata.solutions.arr %}
+                            {% if forloop.counter == 1 %}
+                            <div class="col-xl-4">
+                                <div class="card card-custom gutter-b">
+                                    <div class="card-body text-center px-15 py-20">
+                                        <div class="symbol symbol-circle symbol-lg-60">
+                                            <img src="/static/assets/media/a-solutions/01.jpg" alt="image" />
+                                        </div>
+                                        <div class="mt-4">
+                                            <span class="font-weight-bolder text-primary font-size-h4">{{i.q}}</span>
+                                        </div>
+                                        <div class="text-muted font-weight-bold mb-3 mt-2">
+                                            {{i.customer}}</div>
+                                        <div class="">
+                                            <span class="label label-light-danger label-inline font-weight-bolder">{{i.ans}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% elif forloop.counter == 2 %}
+                            <div class="col-xl-4">
+                                <div class="card card-custom gutter-b">
+                                    <div class="card-body text-center px-15 py-20">
+
+                                        <div class="symbol symbol-circle symbol-lg-60">
+                                            <img src="/static/assets/media/a-solutions/02.jpg" alt="image" />
+                                        </div>
+                                        <div class="mt-4">
+                                            <span class="font-weight-bolder text-primary font-size-h4">{{i.q}}</span>
+                                        </div>
+                                        <div class="text-muted font-weight-bold mb-3 mt-2">
+                                            {{i.customer}}</div>
+
+                                        <div class="">
+                                            <span class="label label-light-success label-inline font-weight-bolder">{{i.ans}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% elif forloop.counter == 3 %}
+                            <div class="col-xl-4">
+                                <div class="card card-custom gutter-b">
+                                    <div class="card-body text-center px-15 py-20">
+                                        <div class="symbol symbol-circle symbol-lg-60">
+                                            <img src="/static/assets/media/a-solutions/03.jpg" alt="image" />
+                                        </div>
+                                        <div class="mt-4">
+                                            <span class="font-weight-bolder text-primary font-size-h4">{{i.q}}</span>
+                                        </div>
+                                        <div class="text-muted font-weight-bold mb-3 mt-2">
+                                            {{i.customer}}</div>
+                                        <div class="">
+                                            <span class="label label-light-warning label-inline font-weight-bolder">{{i.ans}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- ===============================================-->
+                <!-- solution_block ends here -->
+                <!-- ===============================================-->
+
+                <!-- ===============================================-->
+                <!-- business_block starts here -->
+                <!-- ===============================================-->
+
+                <a id="company">
+                    <div class="d-flex flex-column-fluid bg-light p-40">
+                </a>
+                <div class="container">
+                    <div class="text-center">
+                        <span class="label label-warning label-inline font-weight-bolder mb-8">COMPANY</span>
+                    </div>
+                    <blockquote class="blockquote text-center mb-10">
+                        <h2 class="mb-0 display-2 text-dark font-weight-boldest">{{cred.bHead}}
+                        </h2>
+                        <div class="my-6 font-weight-bold font-size-h4 text-dark-50">{{cred.bDesc}}</div>
+
+                        <a href="#" class="btn btn-primary font-weight-boldest btn-lg pull-left btn-shadow mr-2 px-12 py-5">Any
+                            Product CTA</a>
+                        <a href="#" target="_blank" class="btn btn-bg-white btn-secondary font-weight-boldest btn-lg pull-right btn-shadow px-12 py-5">Company
+                            CTA</a>
+                        <div class="container d-flex flex-column flex-md-row justify-content-md-center pt-4">
+                            <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                                <li class="breadcrumb-item font-weight-bolder text-muted">
+                                    <div class="text-muted">Random Value</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </blockquote>
+                </div>
+                </div>
+
+                <!-- ===============================================-->
+                <!-- business_block ends here -->
+                <!-- ===============================================-->
+
+                <!-- ===============================================-->
+                <!-- interlink_block starts here -->
+                <!-- ===============================================-->
+
+                <div class="d-flex flex-column-fluid bg-light-primary p-40">
+                    <div class="container">
+                        <div class="text-center">
+                            <span class="label label-primary label-inline font-weight-bolder mb-8">TESTIMONIALS</span>
+                        </div>
+                        <blockquote class="blockquote text-center mb-10">
+                            <h2 class="my-6 font-weight-boldest display-4 text-dark-75">{{staticdata.interlink.title}}</h2>
+                            <div class="text-center mt-15">
+                                <div class="symbol symbol-circle symbol-lg-60">
+                                    <img src="/static/assets/media/a-faqs/06.jpg" alt="image" />
+                                    <i class="symbol-badge bg-success"></i>
+                                </div>
+                                <div class="mt-4">
+                                    <span class="font-weight-boldest text-primary font-size-h4">{{dynamic.review.name}}</span>
+                                </div>
+                                <div class="text-dark-75 font-weight-bolder font-size-sm mt-2">
+                                    {{dynamic.review.location}}</div>
+                                <div class="mt-2">
+                                    <img src="/static/assets/media/a-reviews/star.svg" alt="image" />
+                                    <img src="/static/assets/media/a-reviews/star.svg" alt="image" />
+                                    <img src="/static/assets/media/a-reviews/star.svg" alt="image" />
+                                    <img src="/static/assets/media/a-reviews/star.svg" alt="image" />
+                                    <img src="/static/assets/media/a-reviews/star.svg" alt="image" />
+                                </div>
+                            </div>
+                        </blockquote>
+                        <div class="flex-row-fluid ml-lg-8 mt-40">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <ul class="nav nav-tabs nav-tabs-line nav-bolder justify-content-center">
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#interlink_01">{{staticdata.interlink.interlink01Title}}</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="tab" href="#interlink_02">{{staticdata.interlink.interlink02Title}}</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#interlink_03">{{staticdata.interlink.interlink03Title}}</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#interlink_04">{{staticdata.interlink.interlink04Title}}</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#interlink_05">{{staticdata.interlink.interlink05Title}}</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="tab" href="#interlink_06">{{staticdata.interlink.interlink06Title}}</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content mt-5" id="myTabContent">
+                                            <div class="tab-pane fade" id="interlink_01" role="tabpanel" aria-labelledby="interlink_01">
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade show active" id="interlink_02" role="tabpanel" aria-labelledby="interlink_02">
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                               oggy
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="interlink_03" role="tabpanel" aria-labelledby="interlink_03">
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="interlink_04" role="tabpanel" aria-labelledby="interlink_04">
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="interlink_05" role="tabpanel" aria-labelledby="interlink_05">
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="interlink_06" role="tabpanel" aria-labelledby="interlink_06">
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="col-xl-2">
+                                                        <div class="naked-card">
+                                                            <div class="text-dark font-weight-bold font-size-md">
+                                                                Topic 01
+                                                            </div>
+                                                            <span class="text-muted text-hover-primary font-weight-bold font-size-md">
+                                                    Topic 02</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===============================================-->
+                <!-- interlink_block ends here -->
+                <!-- ===============================================-->
+
+                <!-- ===============================================-->
+                <!-- footer_block starts here -->
+                <!-- ===============================================-->
+
+                <div class="login-footer pb-40 bg-light-primary">
+                    <div class="mb-6 text-center">
+                        <a href="/"> <img src="/static/assets/media/a-logos/logo_secondary_letter.png" height="30" alt="image" />
+                        </a>
+                    </div>
+                    <div class="container d-flex flex-column flex-md-row justify-content-md-center">
+                        <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold font-size-sm">
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="#" class="text-muted">{{cred.bName}}</a>
+                            </li>
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="./{{staticdata.topic1.slug}}" class="text-muted">{{staticdata.topic1.breadcrumb}}</a>
+                            </li>
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="./{{staticdata.topic2.slug}}" class="text-muted">{{staticdata.topic2.breadcrumb}}</a>
+                            </li>
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="./{{staticdata.topic3.slug}}" class="text-muted">{{staticdata.topic3.breadcrumb}}</a>
+                            </li>
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="./{{staticdata.topic4.slug}}" class="text-muted">{{staticdata.topic4.breadcrumb}}</a>
+                            </li>
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="./{{staticdata.topic5.slug}}" class="text-muted">{{staticdata.topic5.breadcrumb}}</a>
+                            </li>
+                            <li class="breadcrumb-item font-weight-bolder text-muted">
+                                <a href="./{{staticdata.product.slug}}" class="text-muted">{{staticdata.product.breadcrumb}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container d-flex flex-column flex-md-row justify-content-md-center">
+                        <div class="font-size-h6 font-weight-bolder order-2 order-md-1">
+                            <span class="text-muted font-weight-bold mr-2">2021 ©</span>
+                            <span class="text-muted">{{cred.bName}} ::
+                    {{cred.bLocation}}</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-center">
+                            <span class="label label-warning label-inline font-weight-bolder mt-8">{{cred.bName}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===============================================-->
+                <!-- footer_block ends here -->
+                <!-- ===============================================-->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===============================================-->
+    <!-- scrolltop_block starts here -->
+    <!-- ===============================================-->
+
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+        </span>
+    </div>
+
+    <!-- ===============================================-->
+    <!-- scrolltop_block ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!-- floater_block starts here -->
+    <!-- ===============================================-->
+
+    <ul class="sticky-toolbar nav flex-column pl-2 pr-2 pt-3 pb-3 mt-4">
+        <li class="nav-item mb-2" id="" data-toggle="tooltip" title="About" data-placement="right">
+            <a class="btn btn-sm btn-icon btn-bg-white btn-icon-warning btn-hover-warning" href="https:site.com" target="_blank">
+                <span class="svg-icon svg-icon-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+                            <path
+                                d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z"
+                                fill="#000000" opacity="0.3" />
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item mb-2" data-toggle="tooltip" title="Phone" data-placement="left">
+            <a class="btn btn-sm btn-icon btn-bg-white btn-icon-primary btn-hover-primary" href="tel:555 666 7777">
+                <span class="svg-icon svg-icon-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <path
+                                d="M7.13888889,4 L7.13888889,19 L16.8611111,19 L16.8611111,4 L7.13888889,4 Z M7.83333333,1 L16.1666667,1 C17.5729473,1 18.25,1.98121694 18.25,3.5 L18.25,20.5 C18.25,22.0187831 17.5729473,23 16.1666667,23 L7.83333333,23 C6.42705272,23 5.75,22.0187831 5.75,20.5 L5.75,3.5 C5.75,1.98121694 6.42705272,1 7.83333333,1 Z"
+                                fill="#000000" fill-rule="nonzero" />
+                            <polygon fill="#000000" opacity="0.3" points="7 4 7 19 17 19 17 4" />
+                            <circle fill="#000000" cx="12" cy="21" r="1" />
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item" id="" data-toggle="tooltip" title="Email" data-placement="left">
+            <a class="btn btn-sm btn-icon btn-bg-white btn-icon-danger btn-hover-danger" href="mailto:mail@mail.com">
+                <span class="svg-icon svg-icon-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4862 18L12.7975 21.0566C12.5304 21.54 11.922 21.7153 11.4386 21.4483C11.2977 21.3704 11.1777 21.2597 11.0887 21.1255L9.01653 18H5C3.34315 18 2 16.6569 2 15V6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V15C22 16.6569 20.6569 18 19 18H14.4862Z"
+                                fill="black" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6 7H15C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9H6C5.44772 9 5 8.55228 5 8C5 7.44772 5.44772 7 6 7ZM6 11H11C11.5523 11 12 11.4477 12 12C12 12.5523 11.5523 13 11 13H6C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11Z"
+                                fill="black" />
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- ===============================================-->
+    <!-- floater_block ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!-- script starts here -->
+    <!-- ===============================================-->
+
+    <script>
+        var HOST_URL = "https://preview.keenthemes.com/keen/theme/tools/preview";
+    </script>
+    <script>
+        var KTAppSettings = {
+            "breakpoints": {
+                "sm": 576,
+                "md": 768,
+                "lg": 992,
+                "xl": 1200,
+                "xxl": 1200
+            },
+            "colors": {
+                "theme": {
+                    "base": {
+                        "white": "#ffffff",
+                        "primary": "#0BB783",
+                        "secondary": "#E5EAEE",
+                        "success": "#1BC5BD",
+                        "info": "#8950FC",
+                        "warning": "#FFA800",
+                        "danger": "#F64E60",
+                        "light": "#F3F6F9",
+                        "dark": "#212121"
+                    },
+                    "light": {
+                        "white": "#ffffff",
+                        "primary": "#D7F9EF",
+                        "secondary": "#ECF0F3",
+                        "success": "#C9F7F5",
+                        "info": "#EEE5FF",
+                        "warning": "#FFF4DE",
+                        "danger": "#FFE2E5",
+                        "light": "#F3F6F9",
+                        "dark": "#D6D6E0"
+                    },
+                    "inverse": {
+                        "white": "#ffffff",
+                        "primary": "#ffffff",
+                        "secondary": "#212121",
+                        "success": "#ffffff",
+                        "info": "#ffffff",
+                        "warning": "#ffffff",
+                        "danger": "#ffffff",
+                        "light": "#464E5F",
+                        "dark": "#ffffff"
+                    }
+                },
+                "gray": {
+                    "gray-100": "#F3F6F9",
+                    "gray-200": "#ECF0F3",
+                    "gray-300": "#E5EAEE",
+                    "gray-400": "#D6D6E0",
+                    "gray-500": "#B5B5C3",
+                    "gray-600": "#80808F",
+                    "gray-700": "#464E5F",
+                    "gray-800": "#1B283F",
+                    "gray-900": "#212121"
+                }
+            },
+            "font-family": "Poppins"
+        };
+    </script>
+    <script src="/static/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/static/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="/static/assets/js/scripts.bundle.js"></script>
+
+    <!-- ===============================================-->
+    <!-- script ends here -->
+    <!-- ===============================================-->
+
+</body>
+
+</html>

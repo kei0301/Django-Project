@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Update Templates:: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<!-- ===============================================-->
+<!--    hero_block starts here -->
+<!-- ===============================================-->
+
+<body data-scrolltop="on">
+    <div class="text-center pt-40 px-40 bg-white">
+        <div class="container">
+            <div class="mb-6 text-center">
+
+                <a href="/"> <img src="/static/assets/media/a-logos/logo_primary_letter.png" height="30" alt="image" /> </a>
+            </div>
+
+            <blockquote class="blockquote text-center mb-10">
+                <h2 class="mb-0 display-1 text-dark font-weight-boldest">Internet's #1 enterprise, <br />local, &amp; int'l SEO framework</h2>
+                <div class="my-6 font-weight-bold font-size-lg text-dark-50">The World's 1st <code>enterprise</code>, <code>local</code>, and <code>international</code> SEO framework that allows you to<br /> automatically create and optimize millions of dynamic landing pages that scale.</div>
+
+                <div class="container d-flex flex-column flex-md-row justify-content-md-center pb-10">
+                    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                            <div class="text-primary font-weight-boldest">000,000 Topics</div>
+                        </li>
+                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                            <div class="text-primary font-weight-boldest">000,000 Products</div>
+                        </li>
+                    </ul>
+                </div>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    hero_block ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    form starts here -->
+    <!-- ===============================================-->
+
+    <form id="template-form" method="post" action="/create/save/" autocomplete="off">
+        <input type="hidden" name="csrfmiddlewaretoken" value="q8UZtgqMBauG4t0vQAeMvbsRHcevdIul8G8pJrHPMPHZxsYbIE4mKg6lCEBfOq25">
+
+        <!-- template_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-success label-inline font-weight-bolder mb-8">STEP 01</span>
+                        </div>
+
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Template Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">First, you need to a <code>template class</code>; a unique ID you can use to create or update a group of landing pages at a time. When you upload a <code>CSV file</code>, the variables can be used to create dynamic content
+                                and when you upload an <code>image folder</code>, the images will be dynamically used across your landing pages.
+                            </p>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Enter a Template Class" title="Enter a Template Class" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="file" accept=".csv" placeholder=" Upload CSV File" title="Upload CSV File" />
+                                <span class="form-text text-muted">Upload a <code>CSV file</code> from your computer.</span>
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="file" name="files" multiple="true" webkitdirectory="true" directory="true" placeholder="Upload Image Folder
+                                   " title="Upload Image Folder" />
+                                <span class="form-text text-muted">Upload an <code>image folder</code> from your computer.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- template_block ends here -->
+
+        <!-- index_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-warning label-inline font-weight-bolder mb-8">STEP 02</span>
+                        </div>
+
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Index Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">The next thing to do is to create a page title and page description for the home or index page of your website. The index title will be used as the dynamic <code>meta title</code>, while the index description will be the <code>meta description</code>                                of your index page.
+                            </p>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Index Block Title" title="Index Block Title" name="pageTitle" id="pageTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Index Block Description" title="Index Block Description" maxlength="250" rows="3" name="pageDescription
+                                   " id="pageDescription"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- index_block ends here -->
+
+        <!-- value_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-primary label-inline font-weight-bolder mb-8">STEP 03</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Value Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">After all, your business provides some sort of values to your customers, right? Using the variables from your CSV file, you can create dynamic <code>value elements</code> to attract more customers. It's ideal to create twelve,
+                                eight, or <u>four values</u> that will appear on all your topic and product landing pages.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value Block Title" title="Value Block Title" name="valueBlockTitle" id="valueBlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Value Block Description" title="Value Block Description" maxlength="250" rows="3" name="valueBlockDescription
+                                   " id="valueBlockDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value-01 Title" title="Value-01 Title" name="value01Title" id="value01Title" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value-02 Title" title="Value-02 Title" name="value02Title" id="value02Title" />
+                            </div>
+                        </div>
+                        <div class="text-center mt-10">
+                            <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK</a> <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                    01</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                        02</a><a href="" class="mx-1 label label-primary bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                            MORE</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                NEXT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- value_block ends here -->
+
+        <!-- topic_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-danger label-inline font-weight-bolder mb-8">STEP 04</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Topic Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Next, a topic is a <u>categorical landing page</u> with several dynamic <code>topic elements</code> that can be created using the variables from your CSV file. You need <u>five topics</u> i.e. topic-01 is the parent category
+                                of topic-02. The topic title will be used as the dynamic <code>meta title</code>, while the topic description will be the <code>meta description</code> of your topic page.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Block Title" title="Topic-01 Block Title" name="topic01BlockTitle" id="topic01BlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-01 Block Description" title="Topic-01 Block Description" maxlength="250" rows="3" name="topic01BlockDescription
+                                   " id="topic01BlockDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Name" title="Topic-01 Name" name="topic01Name" id="topic01Name" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Title" title="Topic-01 Title" name="topic01Title" id="topic01Title" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Slug" title="Topic-01 Slug" name="topic01Slug" id="topic01Slug" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Label" title="Topic-01 Label" name="topic01Label" id="topic01Label" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Breadcrumb" title="Topic-01 Breadcrumb" name="topic01Breadcrumb" id="topic01Breadcrumb" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-01 Description" title="Topic-01 Description" maxlength="250" rows="3" name="topic01Description
+                                   " id="topic01Description"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-10">
+                            <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK</a> <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                    01</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                        02</a><a href="" class="mx-1 label label-primary bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                            MORE</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                NEXT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- topic_block ends here -->
+
+        <!-- product_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-success label-inline font-weight-bolder mb-8">STEP 05</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Product Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Similarly, a product is a <u>hierarchical landing page</u> with several dynamic <code>product elements</code> that can be created using the variables from your CSV file. A product is created inside the last category, in order
+                                word, topic-05. The product title will be used as the dynamic <code>meta title</code>, while the product description will be the <code>meta description</code> of your product page.
+                            </p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Block Title" title="Product Block Title" name="productBlockTitle" id="productBlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Product Block Description" title="Product Block Description" maxlength="250" rows="3" name="productBlockDescription
+                                   " id="productBlockDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Name" title="Product Name" name="productName" id="productName" />
+                            </div>
+
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Title" title="Product Title" name="productTitle" id="productTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Slug" title="Product Slug" name="productSlug" id="productSlug" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Label" title="Product Label" name="productLabel" id="productLabel" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Breadcrumb" title="Product Breadcrumb" name="productBreadcrumb" id="productBreadcrumb" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Product Description" title="Product Description" maxlength="250" rows="3" name="productDescription
+                                   " id="productDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Button CTA" title="Product Button CTA" name="productButtonCta" id="productButtonCta" />
+                            </div>
+
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Button Redirect" title="Product Button Redirect" name="productButtonRedirect
+                                   " id="productButtonRedirect" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product_block ends here -->
+
+        <!-- package_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-info label-inline font-weight-bolder mb-8">STEP 06</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Package Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Almost done, the <u>package section</u> will appear on your topic and product landing pages that will quickly give your customers an idea about the <code>pricing packages</code> of your products and services. You can use the
+                                variables from CSV file.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Package Block Title" title="Package Block Title" name="packageBlockTitle" id="packageBlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Package Block Description" title="Package Block Description" maxlength="250" rows="3" name="packageBlockDescription
+                                   " id="packageBlockDescription"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- package_block ends here -->
+
+        <!-- faq_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-danger label-inline font-weight-bolder mb-8">STEP 07</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">FAQ Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">In addition, the <u>FAQ section</u> will be shown across your topic and product landing pages. This allows you to add dynamic <code>customer questions</code>. It's ideal to add up to <u>five FAQs</u> and you can use the same
+                                variables as above.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ Block Title" title="FAQ Block Title" name="faqBlockTitle" id="faqBlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="FAQ Block Description" title="FAQ Block Description" maxlength="250" rows="3" name="faqBlockDescription
+                                   " id="faqBlockDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-01 Title" title="FAQ-01 Title" name="faqTitle" id="faqTitle" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-01 Customer" title="FAQ-01 Customer" name="faqCustomerName" id="faqCustomerName" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="FAQ-01 Description" title="FAQ-01 Description" maxlength="250" rows="3" name="faqDescription
+                                   " id="faqDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-10">
+                            <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK</a> <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                    01</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                        02</a><a href="" class="mx-1 label label-primary bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                            MORE</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                NEXT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_block ends here -->
+
+        <!-- solution_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-warning label-inline font-weight-bolder mb-8">STEP 08</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Solution Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Basically, the <u>solution section</u> allows you to add dynamic <code>customer segmentations</code> to your topic and product landing pages. It's ideal to add three or <u>six segmentations</u> and you can continue to use the
+                                variables from your CSV file.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution Block Title" title="Solution Block Title" name="solutionBlockTitle" id="solutionBlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Solution Block Description" title="Solution Block Description" maxlength="250" rows="3" name="solutionBlockDescription
+                                   " id="solutionBlockDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-01 Title" title="Solution-01 Title" name="solution01Title" id="solution01Title" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-01 Label" title="Solution-01 Label" name="solution01Label" id="solution01Label" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Solution-01 Description" title="Solution-01 Description" maxlength="250" rows="3" name="solutionDescription
+                                   " id="solutionDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-10">
+                            <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK</a> <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                    01</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                        02</a><a href="" class="mx-1 label label-primary bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                            MORE</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                NEXT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- solution_block ends here -->
+
+        <!-- interlink_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-primary label-inline font-weight-bolder mb-8">STEP 09</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Interlink Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Last but surely not least, the <u>interlink section</u> comes with dynamic <code>customer testimonials</code> and <code>internal links</code> that will appear across your topic and product landing pages. It's ideal to add at
+                                least <u>five testimonials</u> and you can always use the variables from your CSV file.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Title" title="Interlink-01 Title" name="interlink01Title" id="interlink01Title" />
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-02 Title" title="Interlink-02 Title" name="interlink02Title" id="interlink02Title" />
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-03 Title" title="Interlink-03 Title" name="interlink03Title" id="interlink03Title" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-04 Title" title="Interlink-04 Title" name="interlink04Title" id="interlink04Title" />
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-05 Title" title="Interlink-05 Title" name="interlink05Title" id="interlink05Title" />
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-06 Title" title="Interlink-06 Title" name="interlink06Title" id="interlink06Title" />
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Testimonial" title="Interlink-01 Testimonial" name="interlink01Testimonial
+                                   " id="interlink01Testimonial" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Customer" title="Interlink-01 Customer" name="interlink01Customer" id="interlink01Customer" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Location" title="Interlink-01 Location" name="interlink01Location" id="interlink01Location" />
+                            </div>
+                        </div>
+                        <div class="text-center mt-10">
+                            <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK</a> <a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                    01</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                        02</a><a href="" class="mx-1 label label-primary bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                            MORE</a><a href="" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                NEXT</a>
+                        </div>
+                        <div class="pt-10">
+                            <button type="submit" class="btn btn-primary font-weight-boldest font-size-h6 px-8 py-5 btn-block">GENERATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- interlink_block ends here -->
+
+    </form>
+
+    <!-- ===============================================-->
+    <!--    form ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    footer starts here -->
+    <!-- ===============================================-->
+
+    <div class="login-footer p-40 bg-white">
+        <div class="mb-6 text-center">
+            <a href="/"> <img src="/static/assets/media/a-logos/logo_secondary_letter.png" height="30" alt="image" /> </a>
+        </div>
+        <div class="container d-flex flex-column flex-md-row justify-content-md-center">
+            <div class="font-size-h6 font-weight-bolder order-2 order-md-1 py-2 py-md-0">
+                <span class="text-muted font-weight-bold mr-2">2021 &copy;</span>
+                <span class="text-muted">Kenefit :: 76 Cannon Street, London EC4N 6AE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    footer ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    scrolltop starts here -->
+    <!-- ===============================================-->
+
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon points="0 0 24 0 24 24 0 24" />
+            <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+            <path
+              d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586
+                                    L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+              fill="#000000"
+              fill-rule="nonzero"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    scrolltop ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    script starts here -->
+    <!-- ===============================================-->
+
+    <script>
+        var KTAppSettings = {
+            breakpoints: {
+                sm: 576,
+                md: 768,
+                lg: 992,
+                xl: 1200,
+                xxl: 1200
+            },
+            colors: {
+                theme: {
+                    base: {
+                        white: '#ffffff',
+                        primary: '#0BB783',
+                        secondary: '#E5EAEE',
+                        success: '#1BC5BD',
+                        info: '#8950FC',
+                        warning: '#FFA800',
+                        danger: '#F64E60',
+                        light: '#F3F6F9',
+                        dark: '#212121'
+                    },
+                    light: {
+                        white: '#ffffff',
+                        primary: '#D7F9EF',
+                        secondary: '#ECF0F3',
+                        success: '#C9F7F5',
+                        info: '#EEE5FF',
+                        warning: '#FFF4DE',
+                        danger: '#FFE2E5',
+                        light: '#F3F6F9',
+                        dark: '#D6D6E0'
+                    },
+                    inverse: {
+                        white: '#ffffff',
+                        primary: '#ffffff',
+                        secondary: '#212121',
+                        success: '#ffffff',
+                        info: '#ffffff',
+                        warning: '#ffffff',
+                        danger: '#ffffff',
+                        light: '#464E5F',
+                        dark: '#ffffff'
+                    },
+                },
+                gray: {
+                    'gray-100': '#F3F6F9',
+                    'gray-200': '#ECF0F3',
+                    'gray-300': '#E5EAEE',
+                    'gray-400': '#D6D6E0',
+                    'gray-500': '#B5B5C3',
+                    'gray-600': '#80808F',
+                    'gray-700': '#464E5F',
+                    'gray-800': '#1B283F',
+                    'gray-900': '#212121'
+                },
+            },
+            'font-family': 'Poppins',
+        };
+    </script>
+    <script src="/static/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/static/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="/static/assets/js/scripts.bundle.js"></script>
+    <script src="/static/assets/js/create.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    script ends here -->
+    <!-- ===============================================-->
+
+</body>
+
+</html>

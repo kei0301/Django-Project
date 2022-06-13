@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Add Folder :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+
+        <!-- ===============================================-->
+        <!--    form_content starts here -->
+        <!-- ===============================================-->
+
+        <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+            <div class="d-flex flex-column-fluid flex-center text-center">
+                <div class="login-form login-signup">
+                    <form class="form w-600px" id="" method="POST">
+                        {% csrf_token %}
+                        <div class="text-center pb-8">
+                            <img alt="Logo" src="/static/assets/media/a-logos/logo_primary_letter.png" class="max-h-20px" />
+                        </div>
+                        <div class="pb-4 pt-lg-0 pb-8">
+                            <h3 class="font-weight-boldest text-dark font-size-h4 display-4">Add Folder
+                            </h3>
+                            <p class="text-muted font-weight-bold font-size-h4">It only takes a few seconds</p>
+                        </div>
+
+                        <div class="row mb-8">
+                            <div class="col-md-12">
+                                <div class="">
+                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Folder Name" name="folder"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-8">
+                            <div class="col-md-12">
+                                <div class="">
+                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="url" placeholder="Folder URL" name="url"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-lg-0 pb-5">
+                            <button type="submit" id="" class="btn btn-primary font-weight-boldest font-size-h6 px-8 py-5 btn-block">
+                                DONE
+                            </button>
+                        </div>
+                        <div class="pt-5">
+                            <p class="my-6 font-weight-bold font-size-sm text-dark-50">Upload a media folder to Google Drive, Dropbox, or any CDN. Next, enter the <code>folder name</code> and add the <code>folder URL</code> above. Doing so can make your website to be 7x faster than uploading a folder.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===============================================-->
+        <!--    form_content ends here -->
+        <!-- ===============================================-->
+
+    </div>
+</div>
+
+</html>

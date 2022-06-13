@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Generate Templates:: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<!-- ===============================================-->
+<!--    hero_block starts here -->
+<!-- ===============================================-->
+
+<body data-scrolltop="on">
+    <div class="text-center pt-40 px-40 bg-white">
+        <div class="container">
+            <div class="mb-6 text-center">
+
+                <a href="/"> <img src="/static/assets/media/a-logos/logo_primary_letter.png" height="30" alt="image" /> </a>
+            </div>
+
+            <blockquote class="blockquote text-center mb-10">
+                <h2 class="mb-0 display-1 text-dark font-weight-boldest">Internet's #1 enterprise, <br />local, &amp; int'l SEO framework</h2>
+                <div class="my-6 font-weight-bold font-size-lg text-dark-50">The dynamic landing pages you're about to create or update will automatically be generated or optimized using the
+                    <code>{{data.template.name}}</code> template file, which has the variables in <code>{{data.template.file.csvName}}</code> CSV file, images inside <code>{{data.template.folder.folder}}</code> media folder, and avatars from our API. The moment you click on the {GENERATE}
+                    button, the page templates will be rendered on <code>{{data.template.domain.domain}}</code>, it's that simple.</div>
+
+                <div class="container d-flex flex-column flex-md-row justify-content-md-center pb-10">
+                    <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
+                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                            <div class="text-primary font-weight-boldest">000,000 Topics</div>
+                        </li>
+                        <li class="breadcrumb-item font-weight-bolder text-muted">
+                            <div class="text-primary font-weight-boldest">000,000 Products</div>
+                        </li>
+                    </ul>
+                </div>
+            </blockquote>
+        </div>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    hero_block ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    form starts here -->
+    <!-- ===============================================-->
+
+    <form id="template-form" method="POST" autocomplete="off">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{data.id}}">
+
+        <!-- index_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-warning label-inline font-weight-bolder mb-8">STEP 01</span>
+                        </div>
+
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Index Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">The first thing to do is to create a page title and page description for the home or index page of your website. The index title will be used as the dynamic <code>meta title</code>, while the index description will be the <code>meta description</code>                                of your index page.
+                            </p>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Index Block Title" title="Index Block Title" name="indexTitle" value="{{pre.indexTitle}}" id="pageTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Index Block Description" title="Index Block Description" maxlength="250" rows="3" name="indexDesc" id="pageDescription">{{pre.indexDesc}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- index_block ends here -->
+
+        <!-- value_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-primary label-inline font-weight-bolder mb-8">STEP 02</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Value Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">After all, your business provides some sort of values to your customers, right? Using the variables from your CSV file, you can create dynamic <code>value elements</code> to attract more customers. It's ideal to create twelve,
+                                eight, or <u>four values</u> that will appear on all your topic and product landing pages.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value Block Title" title="Value Block Title" name="valueTitle" value="{{pre.valueTitle}}" id="valueBlockTitle" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Value Block Description" title="Value Block Description" maxlength="250" rows="3" name="valueDesc" id="valueBlockDescription">{{pre.valueDesc}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value-01 Title" title="Value-01 Title" name="value01Title" id="value01Title" value="{{pre.value01Title}}" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value-02 Title" title="Value-02 Title" name="value02Title" id="value02Title" value="{{pre.value02Title}}" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value-03 Title" title="Value-03 Title" name="value03Title" id="value03Title" value="{{pre.value03Title}}"/>
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Value-04 Title" title="Value-04 Title" name="value04Title" id="value04Title" value="{{pre.value04Title}}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- value_block ends here -->
+
+        <!-- topic_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-danger label-inline font-weight-bolder mb-8">STEP 03</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Topic Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Next, a topic is a <u>categorical landing page</u> with several dynamic <code>topic elements</code> that can be created using the variables from your CSV file. You need <u>five topics</u> i.e. topic-01 is the parent category
+                                of topic-02. The topic title will be used as the dynamic <code>meta title</code>, while the topic description will be the <code>meta description</code> of your topic page.</p>
+                        </div>
+
+                        <div class="row mb-4" id="topic1">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Block Title" title="Topic-01 Block Title" name="topic01BlockTitle" id="topic01BlockTitle" value="{{pre.topic01BlockTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic1">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-01 Block Description" title="Topic-01 Block Description" maxlength="250" rows="3" name="topic01BlockDescription" id="topic01BlockDescription">{{pre.topic01BlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic1">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Name" title="Topic-01 Name" name="topic01Name" id="topic01Name" value="{{pre.topic01Name}}"/>
+                            </div>
+                            <div class="col-md-6-goat" id="topic1">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Title" title="Topic-01 Title" name="topic01Title" id="topic01Title" value="{{pre.topic01Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic1">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Slug" title="Topic-01 Slug" name="topic01Slug" id="topic01Slug" value="{{pre.topic01Slug}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic1">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Label" title="Topic-01 Label" name="topic01Label" id="topic01Label" value="{{pre.topic01Label}}"/>
+                            </div>
+                            <div class="col-md-6-goat" >
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-01 Breadcrumb" title="Topic-01 Breadcrumb" name="topic01Breadcrumb" id="topic01Breadcrumb" value="{{pre.topic01Breadcrumb}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-0" id="topic1">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-01 Description" title="Topic-01 Description" maxlength="250" rows="3" name="topic01Description" id="topic01Description">{{pre.topic01Description}}</textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-4" id="topic2">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-02 Block Title" title="Topic-02 Block Title" name="topic02BlockTitle" id="topic02BlockTitle" value="{{pre.topic02BlockTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic2">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-02 Block Description" title="Topic-02 Block Description" maxlength="250" rows="3" name="topic02BlockDescription" id="topic02BlockDescription">{{pre.topic02BlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic2">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-02 Name" title="Topic-02 Name" name="topic02Name" id="topic02Name" value="{{pre.topic02Name}}"/>
+                            </div>
+                            <div class="col-md-6-goat" id="topic2">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-02 Title" title="Topic-02 Title" name="topic02Title" id="topic02Title" value="{{pre.topic02Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic2">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-02 Slug" title="Topic-02 Slug" name="topic02Slug" id="topic02Slug" value="{{pre.topic02Slug}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic2">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-02 Label" title="Topic-02 Label" name="topic02Label" id="topic02Label" value="{{pre.topic02Label}}"/>
+                            </div>
+                            <div class="col-md-6-goat" >
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-02 Breadcrumb" title="Topic-02 Breadcrumb" name="topic02Breadcrumb" id="topic02Breadcrumb" value="{{pre.topic02Breadcrumb}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-0" id="topic2">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-02 Description" title="Topic-02 Description" maxlength="250" rows="3" name="topic02Description" id="topic02Description">{{pre.topic02Description}}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4" id="topic3">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-03 Block Title" title="Topic-03 Block Title" name="topic03BlockTitle" id="topic03BlockTitle" value="{{pre.topic03BlockTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic3">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-03 Block Description" title="Topic-03 Block Description" maxlength="250" rows="3" name="topic03BlockDescription" id="topic03BlockDescription">{{pre.topic03BlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic3">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-03 Name" title="Topic-03 Name" name="topic03Name" id="topic03Name" value="{{pre.topic03Name}}"/>
+                            </div>
+                            <div class="col-md-6-goat" id="topic3">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-03 Title" title="Topic-03 Title" name="topic03Title" id="topic03Title" value="{{pre.topic03Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic3">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-03 Slug" title="Topic-03 Slug" name="topic03Slug" id="topic03Slug" value="{{pre.topic03Slug}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic3">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-03 Label" title="Topic-03 Label" name="topic03Label" id="topic03Label" value="{{pre.topic03Label}}"/>
+                            </div>
+                            <div class="col-md-6-goat" >
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-03 Breadcrumb" title="Topic-03 Breadcrumb" name="topic03Breadcrumb" id="topic03Breadcrumb" value="{{pre.topic03Breadcrumb}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-0" id="topic3">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-03 Description" title="Topic-03 Description" maxlength="250" rows="3" name="topic03Description" id="topic03Description">{{pre.topic03Description}}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4" id="topic4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-04 Block Title" title="Topic-04 Block Title" name="topic04BlockTitle" id="topic04BlockTitle" value="{{pre.topic04BlockTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-04 Block Description" title="Topic-04 Block Description" maxlength="250" rows="3" name="topic04BlockDescription" id="topic04BlockDescription">{{pre.topic04BlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-04 Name" title="Topic-04 Name" name="topic04Name" id="topic04Name" value="{{pre.topic04Name}}"/>
+                            </div>
+                            <div class="col-md-6-goat" id="topic4">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-04 Title" title="Topic-04 Title" name="topic04Title" id="topic04Title" value="{{pre.topic04Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-04 Slug" title="Topic-04 Slug" name="topic04Slug" id="topic04Slug" value="{{pre.topic04Slug}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-04 Label" title="Topic-04 Label" name="topic04Label" id="topic04Label" value="{{pre.topic04Label}}"/>
+                            </div>
+                            <div class="col-md-6-goat" >
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-04 Breadcrumb" title="Topic-04 Breadcrumb" name="topic04Breadcrumb" id="topic04Breadcrumb" value="{{pre.topic04Breadcrumb}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-0" id="topic4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-04 Description" title="Topic-04 Description" maxlength="250" rows="3" name="topic04Description" id="topic04Description">{{pre.topic04Description}}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4" id="topic5">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-05 Block Title" title="Topic-05 Block Title" name="topic05BlockTitle" id="topic05BlockTitle" value="{{pre.topic05BlockTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic5">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-05 Block Description" title="Topic-05 Block Description" maxlength="250" rows="3" name="topic05BlockDescription" id="topic05BlockDescription">{{pre.topic05BlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic5">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-05 Name" title="Topic-05 Name" name="topic05Name" id="topic05Name" value="{{pre.topic05Name}}"/>
+                            </div>
+                            <div class="col-md-6-goat" id="topic5">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-05 Title" title="Topic-05 Title" name="topic05Title" id="topic05Title" value="{{pre.topic05Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic5">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-05 Slug" title="Topic-05 Slug" name="topic05Slug" id="topic05Slug" value="{{pre.topic05Slug}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4" id="topic5">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-05 Label" title="Topic-05 Label" name="topic05Label" id="topic05Label" value="{{pre.topic05Label}}"/>
+                            </div>
+                            <div class="col-md-6-goat" >
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Topic-05 Breadcrumb" title="Topic-05 Breadcrumb" name="topic05Breadcrumb" id="topic05Breadcrumb" value="{{pre.topic05Breadcrumb}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-0" id="topic5">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Topic-05 Description" title="Topic-05 Description" maxlength="250" rows="3" name="topic05Description" id="topic05Description">{{pre.topic05Description}}</textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center mt-10">
+                            <a onclick="shutOn(0)" id="topictoggle" class="mx-1 label label-primary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                01
+                            </a>
+                             <a onclick="shutOn(1)" id="topictoggle" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                    02
+                                </a>
+                             <a onclick="shutOn(2)" id="topictoggle" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                        03
+                                    </a>
+                             <a onclick="shutOn(3)" id="topictoggle" class="mx-1 label label-secondary bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                            04
+                                        </a>
+                             <a onclick="shutOn(4)" id="topictoggle" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                                05
+                                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- topic_block ends here -->
+
+        <!-- product_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-success label-inline font-weight-bolder mb-8">STEP 04</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Product Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Similarly, a product is a <u>hierarchical landing page</u> with several dynamic <code>product elements</code> that can be created using the variables from your CSV file. A product is created inside the last category, in order
+                                word, topic-05. The product title will be used as the dynamic <code>meta title</code>, while the product description will be the <code>meta description</code> of your product page.
+                            </p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Block Title" title="Product Block Title" name="productBlockTitle" id="productBlockTitle" value="{{pre.productBlockTitle}}" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Product Block Description" title="Product Block Description" maxlength="250" rows="3" name="productBlockDescription" id="productBlockDescription">{{pre.productBlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Name" title="Product Name" name="productName" id="productName" value="{{pre.productName}}"/>
+                            </div>
+
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Title" title="Product Title" name="productTitle" id="productTitle" value="{{pre.productTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Slug" title="Product Slug" name="productSlug" id="productSlug" value="{{pre.productSlug}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Label" title="Product Label" name="productLabel" id="productLabel" value="{{pre.productLabel}}"/>
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Breadcrumb" title="Product Breadcrumb" name="productBreadcrumb" id="productBreadcrumb" value="{{pre.productBreadcrumb}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Product Description" title="Product Description" maxlength="250" rows="3" name="productDescription" id="productDescription">{{pre.productDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Button CTA" title="Product Button CTA" name="productButtonCta" id="productButtonCta" value="{{pre.productButtonCta}}"/>
+                            </div>
+
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Product Button Redirect" title="Product Button Redirect" name="productButtonRedirect" id="productButtonRedirect" value="{{pre.productButtonRedirect}}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product_block ends here -->
+
+        <!-- package_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-info label-inline font-weight-bolder mb-8">STEP 05</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Package Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Almost done, the <u>package section</u> will appear on your topic and product landing pages that will quickly give your customers an idea about the <code>pricing packages</code> of your products and services. You can use the
+                                variables from CSV file.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Package Block Title" title="Package Block Title" name="packageBlockTitle" id="packageBlockTitle" value="{{pre.packageBlockTitle}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Package Block Description" title="Package Block Description" maxlength="250" rows="3" name="packageBlockDescription" id="packageBlockDescription">{{pre.packageBlockDescription}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- package_block ends here -->
+
+        <!-- faq_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-danger label-inline font-weight-bolder mb-8">STEP 06</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">FAQ Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">In addition, the <u>FAQ section</u> will be shown across your topic and product landing pages. This allows you to add dynamic <code>customer questions</code>. It's ideal to add up to <u>five FAQs</u> and you can use the same
+                                variables as above.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ Block Title" title="FAQ Block Title" name="faqBlockTitle" id="faqBlockTitle" value="{{pre.faqBlockTitle}}" />
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-4" >
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="FAQ Block Description" title="FAQ Block Description" maxlength="250" rows="3" name="faqBlockDescription" id="faqBlockDescription">{{pre.faqBlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="flex-column-fluid flex-center" id="faqmanage">
+                            {% if render.faq.q_a %}
+                            {% for q_a in render.faq.q_a %}
+                            <div class="row" style="margin-bottom:2%" id="faq{{forloop.counter}}">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-{{forloop.counter}} Title" title="FAQ-{{forloop.counter}} Title" name="faqTitle{{forloop.counter}}" id="faqTitle" value="{{q_a.q}}" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-{{forloop.counter}} Customer" title="FAQ-{{forloop.counter}} Customer" name="faqCustomerName{{forloop.counter}}" id="faqCustomerName" value="{{q_a.customer}}" />
+                            </div>
+                            </div>
+                            <div class="row" id="faq{{forloop.counter}}">
+                            <div class="col-md-12-goat" id="faq{{forloop.counter}}">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="FAQ-{{forloop.counter}} Description" title="FAQ-{{forloop.counter}} Description" maxlength="250" rows="3" name="faqDescription{{forloop.counter}}" id="faqDescription">{{q_a.ans}}</textarea>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <div class="row" style="margin-bottom:2%" id="faq1">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-1 Title" title="FAQ-1 Title" name="faqTitle1" id="faqTitle" value="" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-1 Customer" title="FAQ-1 Customer" name="faqCustomerName1" id="faqCustomerName" value="" />
+                            </div>
+                            </div>
+                            <div class="row" id="faq1">
+                            <div class="col-md-12-goat" id="faq1">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="FAQ-1 Description" title="FAQ-1 Description" maxlength="250" rows="3" name="faqDescription1" id="faqDescription"></textarea>
+                            </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% if render.faq.q_a %}
+                        <input type="hidden" value="{{render.faq.q_a|length}}" id="faqnum" name="faqnum">
+                        {% else %}
+                        <input type="hidden" value="1" id="faqnum" name="faqnum">
+                        {% endif %}
+                        <div class="text-center mt-10">
+                            <a onclick="faqswitch(false)" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK
+                            </a>
+                            <a onclick="delfaq()" id="topictoggle" class="mx-1 label label-primary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                Delete
+                            </a> 
+                            <a onclick="faqswitch(true)" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                NEXT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- faq_block ends here -->
+
+        <!-- solution_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-warning label-inline font-weight-bolder mb-8">STEP 07</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Solution Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Basically, the <u>solution section</u> allows you to add dynamic <code>customer segmentations</code> to your topic and product landing pages. It's ideal to add three or <u>six segmentations</u> and you can continue to use the
+                                variables from your CSV file.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution Block Title" title="Solution Block Title" name="solutionBlockTitle" id="solutionBlockTitle" value="{{pre.solutionBlockTitle}}" />
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12-goat">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Solution Block Description" title="Solution Block Description" maxlength="250" rows="3" name="solutionBlockDescription" id="solutionBlockDescription">{{pre.solutionBlockDescription}}</textarea>
+                            </div>
+                        </div>
+                        <div class="flex-column-fluid flex-center" id="solmanage">
+                            {% if render.solutions.arr %}
+                            {% for ele in render.solutions.arr %}
+                            <div class="row" style="margin-bottom:2%" id="sol{{forloop.counter}}">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-{{forloop.counter}} Title" title="Solution-{{forloop.counter}} Title" name="solutiontitle{{forloop.counter}}" id="solutiontitle{{forloop.counter}}" value="{{ele.q}}" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-{{forloop.counter}}  Customer" title="Solution-{{forloop.counter}}  Customer" name="solutionlabel{{forloop.counter}}" id="solutionlabel{{forloop.counter}}" value="{{ele.ans}}" />
+                            </div>
+                            </div>
+                            <div class="row" id="sol{{forloop.counter}}">
+                            <div class="col-md-12-goat" id="sol{{forloop.counter}}">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Solution-{{forloop.counter}}  Description" title="Solution-{{forloop.counter}}  Description" maxlength="250" rows="3" name="solutiondescription{{forloop.counter}}" id="solutiondescription{{forloop.counter}}">{{ele.customer}}</textarea>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            
+                            <div class="row" style="margin-bottom:2%" id="sol1">
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-1 Title" title="Solution-1  Title" name="solutiontitle1" id="solutiontitle1" value="" />
+                            </div>
+                            <div class="col-md-6-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-1  Customer" title="Solution-1  Customer" name="solutionlabel1" id="solutionlabel1" value="" />
+                            </div>
+                            </div>
+                            <div class="row" id="sol1">
+                            <div class="col-md-12-goat" id="sol1">
+                                <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Solution-1  Description" title="Solution-1  Description" maxlength="250" rows="3" name="solutiondescription1" id="solutiondescription1"></textarea>
+                            </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% if render.solutions.arr %}
+                        <input type="hidden" value="{{pre.solnum}}" id="solnum" name="solnum">
+                        {% else %}
+                        <input type="hidden" value="1" id="solnum" name="solnum">
+                        {% endif %}
+
+                        <div class="text-center mt-10">
+                            <a onclick="solswitch(false)" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK
+                            </a> 
+                            <a onclick="delsol()" id="topictoggle" class="mx-1 label label-primary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                Delete
+                            </a>
+                            <a onclick="solswitch(true)" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                NEXT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- solution_block ends here -->
+
+        <!-- interlink_block starts here -->
+
+        <div class="d-flex flex-column-fluid bg-white py-20">
+            <div class="container text-center">
+                <div class="d-flex flex-column-fluid flex-center text-center">
+                    <div class="form w-800px">
+                        <div class="text-center">
+                            <span class="label label-primary label-inline font-weight-bolder mb-8">STEP 08</span>
+                        </div>
+                        <div class="pb-4 px-20">
+                            <h3 class="font-weight-bolder text-dark font-size-h2">Interlink Block</h3>
+                            <p class="my-6 font-weight-bold font-size-h6 text-dark-50">Last but surely not least, the <u>interlink section</u> comes with dynamic <code>customer testimonials</code> and <code>internal links</code> that will appear across your topic and product landing pages. It's ideal to add at
+                                least <u>five testimonials</u> and you can always use the variables from your CSV file.</p>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Title" title="Interlink-01 Title" name="interlink01Title" id="interlink01Title" value="{{pre.interlink01Title}}"/>
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-02 Title" title="Interlink-02 Title" name="interlink02Title" id="interlink02Title" value="{{pre.interlink02Title}}"/>
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-03 Title" title="Interlink-03 Title" name="interlink03Title" id="interlink03Title" value="{{pre.interlink03Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-04 Title" title="Interlink-04 Title" name="interlink04Title" id="interlink04Title" value="{{pre.interlink04Title}}"/>
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-05 Title" title="Interlink-05 Title" name="interlink05Title" id="interlink05Title" value="{{pre.interlink05Title}}"/>
+                            </div>
+                            <div class="col-md-4-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-06 Title" title="Interlink-06 Title" name="interlink06Title" id="interlink06Title" value="{{pre.interlink06Title}}"/>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-12-goat">
+                                <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Testimonial" title="Interlink-01 Testimonial" name="interlinkTestimonial" id="interlink01Testimonial" value="{{pre.interlinkTestimonial}}"/>
+                            </div>
+                        </div>
+                        <div id="peoplehub">
+                            {% if render.interlink.testimonial %}
+                            {% for ele in render.interlink.testimonial %}
+                            <div class="row mb-0" id="people{{forloop.counter}}">
+                                <div class="col-md-6-goat">
+                                    <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Customer" title="Customer" name="Customer{{forloop.counter}}" id="interlink01Customer" value="{{ele.name}}"/>
+                                </div>
+                                <div class="col-md-6-goat">
+                                    <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Location" title="Location1" name="Location{{forloop.counter}}" id="interlink01Location" value="{{ele.location}}"/>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <div class="row mb-0" id="people1">
+                                <div class="col-md-6-goat">
+                                    <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Customer" title="Customer" name="Customer1" id="interlink01Customer" value=""/>
+                                </div>
+                                <div class="col-md-6-goat">
+                                    <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-01 Location" title="Location1" name="Location1" id="interlink01Location" value=""/>
+                                </div>
+                            </div>                            
+                            {% endif %}
+
+                        </div>
+                        {% if render.interlink.testimonial %}
+                        <input type="hidden" name="peoplenum" id="peoplenum" value="{{pre.peoplenum}}">
+                        {% else %}
+                        <input type="hidden" name="peoplenum" id="peoplenum" value="1">
+                        {% endif %}
+                        <div class="text-center mt-10">
+                            <a onclick="plswitch(false)" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                BACK
+                            </a>
+                            <a onclick="delpl()" id="topictoggle" class="mx-1 label label-primary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                Delete
+                            </a>
+                            <a onclick="plswitch(true)" class="mx-1 label label-secondary text-hover-white bg-hover-primary font-weight-bolder label-inline font-size-sm">
+                                NEXT
+                            </a>
+                        </div>
+                        <div class="pt-10">
+                            <button type="submit" class="btn btn-primary font-weight-boldest font-size-h6 px-8 py-5 btn-block">GENERATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- interlink_block ends here -->
+
+    </form>
+
+    <!-- ===============================================-->
+    <!--    form ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    footer starts here -->
+    <!-- ===============================================-->
+
+    <div class="login-footer p-40 bg-white">
+        <div class="mb-6 text-center">
+            <a href="/"> <img src="/static/assets/media/a-logos/logo_secondary_letter.png" height="30" alt="image" /> </a>
+        </div>
+        <div class="container d-flex flex-column flex-md-row justify-content-md-center">
+            <div class="font-size-h6 font-weight-bolder order-2 order-md-1 py-2 py-md-0">
+                <span class="text-muted font-weight-bold mr-2">2021 &copy;</span>
+                <span class="text-muted">Kenefit :: 76 Cannon Street, London EC4N 6AE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    footer ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    scrolltop starts here -->
+    <!-- ===============================================-->
+
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <polygon points="0 0 24 0 24 24 0 24" />
+            <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+            <path
+              d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+              fill="#000000"
+              fill-rule="nonzero"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+
+    <!-- ===============================================-->
+    <!--    scrolltop ends here -->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    script starts here -->
+    <!-- ===============================================-->
+
+    <script>
+        var KTAppSettings = {
+            breakpoints: {
+                sm: 576,
+                md: 768,
+                lg: 992,
+                xl: 1200,
+                xxl: 1200
+            },
+            colors: {
+                theme: {
+                    base: {
+                        white: '#ffffff',
+                        primary: '#0BB783',
+                        secondary: '#E5EAEE',
+                        success: '#1BC5BD',
+                        info: '#8950FC',
+                        warning: '#FFA800',
+                        danger: '#F64E60',
+                        light: '#F3F6F9',
+                        dark: '#212121'
+                    },
+                    light: {
+                        white: '#ffffff',
+                        primary: '#D7F9EF',
+                        secondary: '#ECF0F3',
+                        success: '#C9F7F5',
+                        info: '#EEE5FF',
+                        warning: '#FFF4DE',
+                        danger: '#FFE2E5',
+                        light: '#F3F6F9',
+                        dark: '#D6D6E0'
+                    },
+                    inverse: {
+                        white: '#ffffff',
+                        primary: '#ffffff',
+                        secondary: '#212121',
+                        success: '#ffffff',
+                        info: '#ffffff',
+                        warning: '#ffffff',
+                        danger: '#ffffff',
+                        light: '#464E5F',
+                        dark: '#ffffff'
+                    },
+                },
+                gray: {
+                    'gray-100': '#F3F6F9',
+                    'gray-200': '#ECF0F3',
+                    'gray-300': '#E5EAEE',
+                    'gray-400': '#D6D6E0',
+                    'gray-500': '#B5B5C3',
+                    'gray-600': '#80808F',
+                    'gray-700': '#464E5F',
+                    'gray-800': '#1B283F',
+                    'gray-900': '#212121'
+                },
+            },
+            'font-family': 'Poppins',
+        };
+    </script>
+    <script src="/static/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/static/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+    <script src="/static/assets/js/scripts.bundle.js"></script>
+    <script src="/static/assets/js/create.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    script ends here -->
+    <!-- ===============================================-->
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+// form js
+function shutOff(elemt) {
+    elemt.forEach(function(ele){
+        ele.style.display = "none";
+    });
+}    
+var formtopic = ["#topic1","#topic2","#topic3","#topic4","#topic5"]
+shutOff(document.querySelectorAll("#topic1"))
+shutOff(document.querySelectorAll("#topic2"))
+shutOff(document.querySelectorAll("#topic3"))
+shutOff(document.querySelectorAll("#topic4"))
+shutOff(document.querySelectorAll("#topic5"))
+
+function shutOn(num){
+
+    document.querySelectorAll("#topictoggle").forEach(function(ele){ele.className = ele.className.replace("label-primary", "label-secondary")})
+    event.target.className = event.target.className.replace("label-secondary", "label-primary");
+
+    shutOff(document.querySelectorAll("#topic1"))
+    shutOff(document.querySelectorAll("#topic2"))
+    shutOff(document.querySelectorAll("#topic3"))
+    shutOff(document.querySelectorAll("#topic4"))
+    shutOff(document.querySelectorAll("#topic5"))
+    elemt = document.querySelectorAll(formtopic[num]);
+    elemt.forEach(function(ele){
+        ele.style.display = null;
+    });
+
+}
+elemt = document.querySelectorAll(formtopic[0]);
+elemt.forEach(function(ele){
+    ele.style.display = null;
+});
+
+
+// for faq
+
+function makefaq(num){
+    let form = `
+    <div class="row mb-4" id="faq${num}">
+        <div class="col-md-6-goat">
+            <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-${num} Title" title="FAQ-${num} Title" name="faqTitle${num}" id="faqTitle" />
+        </div>
+        <div class="col-md-6-goat">
+            <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="FAQ-${num} Customer" title="FAQ-${num} Customer" name="faqCustomerName${num}" id="faqCustomerName" />
+        </div>
+    </div>
+    <div class="row mb-0" id="faq${num}">
+        <div class="col-md-12-goat" id="faq${num}">
+            <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="FAQ-${num} Description" title="FAQ-${num} Description" maxlength="250" rows="3" name="faqDescription${num}" id="faqDescription"></textarea>
+        </div>
+    </div>    
+    `
+    $("#faqmanage").append(form)
+};
+var faqnum = document.getElementById("faqnum")
+var pos = 1;
+var faqblocks = parseInt(faqnum.value);
+document.getElementById("faqmanage").getElementsByTagName("div").forEach(function(ele){ele.style.display = "none"})
+document.querySelectorAll(`#faq1`).forEach(function(ele){ele.style.display = null})
+document.getElementById(`faq1`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+function delfaq(){
+    if (pos != 1){
+    document.querySelectorAll(`#faq${pos}`).forEach((ele) => {$(ele).remove()})
+    faqblocks -=1;
+    faqnum.value = parseInt(faqnum.value) - 1;
+    pos -= 1;
+    document.querySelectorAll(`#faq${pos}`).forEach(function(ele){ele.style.display = null})
+    document.getElementById(`faq${pos}`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+    }
+}
+function faqswitch(ForB){
+
+    document.getElementById("faqmanage").getElementsByTagName("div").forEach(function(ele){ele.style.display = "none"})
+    if ((pos == 1) && (ForB == false)){
+        document.querySelectorAll(`#faq1`).forEach(function(ele){ele.style.display = null})
+            document.getElementById(`faq1`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+    } else if ((pos == faqblocks) && (ForB == true)){
+        faqblocks +=1
+        faqnum.value = parseInt(faqnum.value) + 1
+        makefaq(faqblocks);
+        faqswitch(ForB)
+    } else {
+        if (ForB) {
+            pos +=1;
+            if (document.querySelectorAll(`#faq${pos}`).length == 0) {pos+=1}
+            document.querySelectorAll(`#faq${pos}`).forEach(function(ele){ele.style.display = null})
+            document.getElementById(`faq${pos}`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+        } else {
+            pos -=1;
+            if (document.querySelectorAll(`#faq${pos}`).length == 0) {pos-=1}
+            document.querySelectorAll(`#faq${pos}`).forEach(function(ele){ele.style.display = null})
+            document.getElementById(`faq${pos}`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+        }
+
+    }
+}
+
+// for solutions
+
+function makesol(num){
+    let form = `
+        <div class="row" style="margin-bottom:2%" id="sol${num}">
+        <div class="col-md-6-goat">
+            <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-${num} Title" title="Solution-${num}  Title" name="solutiontitle${num}" id="solutiontitle${num}" />
+        </div>
+        <div class="col-md-6-goat">
+            <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Solution-${num}  Customer" title="Solution-1  Customer" name="solutionlabel${num}" id="solutionlabel${num}" />
+        </div>
+        </div>
+        <div class="row" id="sol${num}">
+        <div class="col-md-12-goat" id="sol${num}">
+            <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" placeholder="Solution-${num}  Description" title="Solution-${num}  Description" maxlength="250" rows="3" name="solutiondescription${num}" id="solutiondescription${num}"></textarea>
+        </div>
+        </div>   
+    `
+    // document.getElementById("solmanage").innerHTML += form;
+    $("#solmanage").append(form);
+};
+function delsol(){
+    if (solpos != 1){
+    document.querySelectorAll(`#sol${solpos}`).forEach((ele) => {$(ele).remove()})
+    solblocks -=1;
+    solnum.value = parseInt(solnum.value) - 1;
+    solpos -= 1;
+    document.querySelectorAll(`#sol${solpos}`).forEach(function(ele){ele.style.display = null})
+    document.getElementById(`sol${solpos}`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+    }
+}
+var solnum = document.getElementById("solnum")
+var solpos = 1;
+var solblocks = parseInt(solnum.value);
+document.getElementById("solmanage").getElementsByTagName("div").forEach(function(ele){ele.style.display = "none"})
+document.querySelectorAll(`#sol1`).forEach(function(ele){ele.style.display = null})
+document.getElementById(`sol1`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+function solswitch(ForB){
+
+    document.getElementById("solmanage").getElementsByTagName("div").forEach(function(ele){ele.style.display = "none"})
+    if ((solpos == 1) && (ForB == false)){
+        document.querySelectorAll(`#sol1`).forEach(function(ele){ele.style.display = null})
+            document.getElementById(`sol1`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+    } else if ((solpos == solblocks) && (ForB == true)){
+        solblocks +=1
+        solnum.value = parseInt(solnum.value) + 1
+        makesol(solblocks);
+        solswitch(ForB)
+    } else {
+        if (ForB) {
+            solpos +=1;
+            if (document.querySelectorAll(`#sol${solpos}`).length == 0) {solpos+=1}
+            document.querySelectorAll(`#sol${solpos}`).forEach(function(ele){ele.style.display = null})
+            document.getElementById(`sol${solpos}`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+        } else {
+            solpos -=1;
+            if (document.querySelectorAll(`#sol${solpos}`).length == 0) {solpos+=1}
+            document.querySelectorAll(`#sol${solpos}`).forEach(function(ele){ele.style.display = null})
+            document.getElementById(`sol${solpos}`).getElementsByTagName("div").forEach(function(ele){ele.style.display = null})
+        }
+
+    }
+}
+
+// for testimonials
+
+function makepeople(num){
+    let form = `
+    <div class="row mb-0" id="people${num}">
+        <div class="col-md-6-goat">
+            <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-0${num} Customer" title="Interlink-0${num} Customer" name="Customer${num}" id="interlink0${num}Customer" />
+        </div>
+        <div class="col-md-6-goat">
+            <input class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-h6" type="text" placeholder="Interlink-${num} Location" title="Interlink-${num} Location" name="Location${num}" id="interlink${num}Location" />
+        </div>
+    </div>  
+    `
+    // document.getElementById("peoplehub").innerHTML += form;
+    $("#peoplehub").append(form);
+};
+
+var peoplenum = document.getElementById("peoplenum")
+var plpos = 1;
+var plblocks = parseInt(peoplenum.value);
+document.getElementById("peoplehub").getElementsByClassName('mb-0').forEach(function(ele){ele.style.display = "none"});
+document.getElementById(`people1`).style.display = null;
+function delpl(){
+    if (plpos != 1){
+    $(`#people${plpos}`).remove()
+    plblocks -=1;
+    peoplenum.value = parseInt(peoplenum.value) - 1;
+    plpos -= 1;
+    document.getElementById(`people${plpos}`).style.display = null
+    }
+}
+function plswitch(ForB){
+
+    document.getElementById("peoplehub").getElementsByClassName('mb-0').forEach(function(ele){ele.style.display = "none"})
+    if ((plpos == 1) && (ForB == false)){
+        document.getElementById(`people1`).style.display = null;
+    } else if ((plpos == plblocks) && (ForB == true)){
+        plblocks +=1
+        peoplenum.value = parseInt(peoplenum.value) + 1
+        makepeople(plblocks);
+        plswitch(ForB)
+    } else {
+        if (ForB) {
+            plpos +=1;
+            if (document.querySelectorAll(`#people${plpos}`).length == 0) {plpos+=1}
+            document.getElementById(`people${plpos}`).style.display = null
+        } else {
+            plpos -=1;
+            if (document.querySelectorAll(`#people${plpos}`).length == 0) {plpos-=1}
+            document.getElementById(`people${plpos}`).style.display = null
+        }
+
+    }
+}
+
+</script>
+
+</html>

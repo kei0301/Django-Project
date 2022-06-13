@@ -1,0 +1,156 @@
+{% load static %}
+
+<!-- ===============================================-->
+<!--    thread_body_actions starts here -->
+<!-- ===============================================-->
+
+<span class="navi-icon mr-2" data-offset="0px 8px" data-toggle="tooltip" data-placement="top" title="Like">
+			<a href=""><span class="btn btn-icon btn-circle btn-sm btn-light-success">
+                <span class="svg-icon svg-icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M14,16 L12,16 L12,12.5 C12,11.6715729 11.3284271,11 10.5,11 C9.67157288,11 9,11.6715729 9,12.5 L9,17.5 C9,19.4329966 10.5670034,21 12.5,21 C14.4329966,21 16,19.4329966 16,17.5 L16,7.5 C16,5.56700338 14.4329966,4 12.5,4 L12,4 C10.3431458,4 9,5.34314575 9,7 L7,7 C7,4.23857625 9.23857625,2 12,2 L12.5,2 C15.5375661,2 18,4.46243388 18,7.5 L18,17.5 C18,20.5375661 15.5375661,23 12.5,23 C9.46243388,23 7,20.5375661 7,17.5 L7,12.5 C7,10.5670034 8.56700338,9 10.5,9 C12.4329966,9 14,10.5670034 14,12.5 L14,16 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.500000, 12.500000) rotate(-315.000000) translate(-12.500000, -12.500000) "/>
+                        </g>
+                    </svg>
+        </span>
+</span>
+</a>
+</span>
+<span class="navi-text font-weight-bold font-size-sm mr-12">0</span>
+
+<span class="navi-icon mr-2" data-offset="0px 8px" data-toggle="tooltip" data-placement="top" title="Repost">
+    <a href=""><span class="btn btn-icon btn-circle btn-sm btn-light-danger">
+        <span class="svg-icon svg-icon-md">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24"/>
+                    <path d="M12,8 L8,8 C5.790861,8 4,9.790861 4,12 L4,13 C4,14.6568542 5.34314575,16 7,16 L7,18 C4.23857625,18 2,15.7614237 2,13 L2,12 C2,8.6862915 4.6862915,6 8,6 L12,6 L12,4.72799742 C12,4.62015048 12.0348702,4.51519416 12.0994077,4.42878885 C12.264656,4.2075478 12.5779675,4.16215674 12.7992086,4.32740507 L15.656242,6.46136716 C15.6951359,6.49041758 15.7295917,6.52497737 15.7585249,6.56395854 C15.9231063,6.78569617 15.876772,7.09886961 15.6550344,7.263451 L12.798001,9.3840407 C12.7118152,9.44801079 12.607332,9.48254921 12.5,9.48254921 C12.2238576,9.48254921 12,9.25869158 12,8.98254921 L12,8 Z" fill="#000000"/>
+                    <path d="M12.0583175,16 L16,16 C18.209139,16 20,14.209139 20,12 L20,11 C20,9.34314575 18.6568542,8 17,8 L17,6 C19.7614237,6 22,8.23857625 22,11 L22,12 C22,15.3137085 19.3137085,18 16,18 L12.0583175,18 L12.0583175,18.9825492 C12.0583175,19.2586916 11.8344599,19.4825492 11.5583175,19.4825492 C11.4509855,19.4825492 11.3465023,19.4480108 11.2603165,19.3840407 L8.40328311,17.263451 C8.18154548,17.0988696 8.13521119,16.7856962 8.29979258,16.5639585 C8.32872576,16.5249774 8.36318164,16.4904176 8.40207551,16.4613672 L11.2591089,14.3274051 C11.48035,14.1621567 11.7936615,14.2075478 11.9589099,14.4287888 C12.0234473,14.5151942 12.0583175,14.6201505 12.0583175,14.7279974 L12.0583175,16 Z" fill="#000000" opacity="0.3"/>
+                </g>
+            </svg>
+</span>
+</span>
+</a>
+</span>
+<span class="navi-text font-weight-bold font-size-sm mr-12">0</span>
+
+<span class="navi-icon mr-2" data-offset="0px 8px" data-toggle="tooltip" data-placement="top" title="Reply">
+			<a href="" data-toggle="modal" data-target="#replyModal"><span class="btn btn-icon btn-circle btn-sm btn-light-info">
+                <span class="svg-icon svg-icon-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path d="M8.43296491,7.17429118 L9.40782327,7.85689436 C9.49616631,7.91875282 9.56214077,8.00751728 9.5959027,8.10994332 C9.68235021,8.37220548 9.53982427,8.65489052 9.27756211,8.74133803 L5.89079566,9.85769242 C5.84469033,9.87288977 5.79661753,9.8812917 5.74809064,9.88263369 C5.4720538,9.8902674 5.24209339,9.67268366 5.23445968,9.39664682 L5.13610134,5.83998177 C5.13313425,5.73269078 5.16477113,5.62729274 5.22633424,5.53937151 C5.384723,5.31316892 5.69649589,5.25819495 5.92269848,5.4165837 L6.72910242,5.98123382 C8.16546398,4.72182424 10.0239806,4 12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 L6,12 C6,15.3137085 8.6862915,18 12,18 C15.3137085,18 18,15.3137085 18,12 C18,8.6862915 15.3137085,6 12,6 C10.6885336,6 9.44767246,6.42282109 8.43296491,7.17429118 Z" fill="#000000" fill-rule="nonzero"/>
+                        </g>
+                    </svg>
+        </span>
+</span>
+</a>
+</span>
+<span class="navi-text font-weight-bold font-size-sm mr-12">0</span>
+
+<!--    thread_modal_reply starts here -->
+
+<div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-20">
+                <div data-scroll="true" data-height="auto">
+                    <div class="text-center">
+                        <div class="symbol symbol-50 symbol-circle symbol-xl-50">
+                            <div class="symbol-label" style="background-image:url( '/static/assets/media/a-team/13.jpg')">
+                            </div>
+                            <i class="symbol-badge bg-warning"></i>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-dark font-weight-bolder font-size-h4">Mia
+										Adams
+									</span>
+                        </div>
+                        <div class="text-dark-50 font-weight-bold font-size-lg">
+                            $username</div>
+                        <div class="text-dark-75 font-weight-bold font-size-h4 mt-4">
+                            viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus.</div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-lg" placeholder="Reply to $username" maxlength="200" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="pt-0 text-center">
+                        <button type="submit" class="btn btn-primary font-weight-bolder font-size-lg px-8 py-3">REPLY</button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    thread_modal_reply ends here -->
+
+<span class="navi-icon mr-2" data-offset="0px 8px" data-toggle="tooltip" data-placement="top" title="Share">
+    <a href="" data-toggle="modal" data-target="#shareModal"><span class="btn btn-icon btn-circle btn-sm btn-light-warning">
+        <span class="svg-icon svg-icon-md">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24"/>
+                    <path d="M18,15 L18,13.4774152 C18,13.3560358 18.0441534,13.2388009 18.1242243,13.147578 C18.3063883,12.9400428 18.622302,12.9194754 18.8298372,13.1016395 L21.7647988,15.6778026 C21.7814819,15.6924462 21.7971714,15.7081846 21.811763,15.7249133 C21.9932797,15.933015 21.9717282,16.2488631 21.7636265,16.4303797 L18.828665,18.9903994 C18.7375973,19.0698331 18.6208431,19.1135979 18.5,19.1135979 C18.2238576,19.1135979 18,18.8897403 18,18.6135979 L18,17 L16.445419,17 C14.5938764,17 12.8460429,16.1451629 11.7093057,14.6836437 L7.71198984,9.54423755 C6.95416504,8.56989138 5.7889427,8 4.55458097,8 L2,8 L2,6 L4.55458097,6 C6.40612357,6 8.15395708,6.85483706 9.29069428,8.31635632 L13.2880102,13.4557625 C14.045835,14.4301086 15.2110573,15 16.445419,15 L18,15 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                    <path d="M18,6 L18,4.4774157 C18,4.3560363 18.0441534,4.23880134 18.1242243,4.14757848 C18.3063883,3.94004327 18.622302,3.9194759 18.8298372,4.10163997 L21.7647988,6.67780304 C21.7814819,6.69244668 21.7971714,6.70818509 21.811763,6.72491379 C21.9932797,6.93301548 21.9717282,7.24886356 21.7636265,7.43038021 L18.828665,9.99039986 C18.7375973,10.0698336 18.6208431,10.1135984 18.5,10.1135984 C18.2238576,10.1135984 18,9.88974079 18,9.61359842 L18,8 L16.445419,8 C15.2110573,8 14.045835,8.56989138 13.2880102,9.54423755 L9.29069428,14.6836437 C8.15395708,16.1451629 6.40612357,17 4.55458097,17 L2,17 L2,15 L4.55458097,15 C5.7889427,15 6.95416504,14.4301086 7.71198984,13.4557625 L11.7093057,8.31635632 C12.8460429,6.85483706 14.5938764,6 16.445419,6 L18,6 Z" fill="#000000" fill-rule="nonzero"/>
+                </g>
+            </svg>
+</span>
+</span>
+</a>
+</span>
+<span class="navi-text font-weight-bold font-size-sm mr-0">0</span>
+
+<!--    thread_modal_share starts here -->
+
+<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-20">
+                <div data-scroll="true" data-height="auto">
+                    <div class="text-center">
+                        <div class="symbol symbol-50 symbol-circle symbol-xl-50">
+                            <div class="symbol-label" style="background-image:url( '/static/assets/media/a-team/13.jpg')">
+                            </div>
+                            <i class="symbol-badge bg-warning"></i>
+                        </div>
+                        <div class="mt-3">
+                            <span class="text-dark font-weight-bolder font-size-h4">Mia
+                                Adams
+                            </span>
+                        </div>
+                        <div class="text-dark-50 font-weight-bold font-size-lg">
+                            $username</div>
+                        <div class="text-dark-75 font-weight-bold font-size-h4 mt-4">
+                            viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus.</div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <textarea class="form-control form-control-solid font-weight-bold h-auto p-6 rounded-lg font-size-lg" placeholder="Share with $username" maxlength="200" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="pt-0 text-center">
+                        <button type="submit" class="btn btn-primary font-weight-bolder font-size-lg px-8 py-3">SHARE</button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    thread_modal_share ends here -->
+
+</span>
+</span>
+
+<!-- ===============================================-->
+<!--    thread_body_actions ends here -->
+<!-- ===============================================-->

@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Thanks :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+
+        <!-- ===============================================-->
+        <!--    account_alert starts here -->
+        <!-- ===============================================-->
+
+        <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+            <div class="d-flex flex-column-fluid flex-center text-center">
+                <div class="login-form login-signup">
+                    <form class="form w-900px" id="">
+
+                        <div class="text-center pb-8">
+                            <img alt="Logo" src="/static/assets/media/a-logos/logo_primary_letter.png" class="max-h-20px" />
+                        </div>
+
+                        <div class="pb-4 pt-lg-0 pt-0">
+                            <h3 class="font-weight-boldest text-dark font-size-h4 display-2">We thank you so much for creating a Kenefit account.</h3>
+                            <p class="text-muted font-weight-bold font-size-h4">Dear FName, to access your account, you'd need to verify your email by<br> clicking on the link in the email that we've just sent you.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+            <!-- ===============================================-->
+            <!--    footer starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/footer.html" %}
+
+            <!-- ===============================================-->
+            <!--    footer ends here -->
+            <!-- ===============================================-->
+
+        </div>
+
+        <!-- ===============================================-->
+        <!--    account_alert ends here -->
+        <!-- ===============================================-->
+
+    </div>
+</div>
+
+</html>

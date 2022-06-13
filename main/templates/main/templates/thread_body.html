@@ -1,0 +1,107 @@
+{% load static %}
+
+<!-- ===============================================-->
+<!--    thread_body starts here -->
+<!-- ===============================================-->
+
+<div class="card px-8 pt-8">
+
+    <div class="row">
+        <div class="col-xl-12 text-center">
+            <div class="bgi-no-repeat bgi-size-cover rounded min-h-300px mb-8" style="background-image: url(/static/assets/media/gif/ad.gif)"></div>
+        </div>
+    </div>
+
+    <div class="separator separator-solid"></div>
+
+    <div class="bg-white py-6">
+        <div class="d-flex align-items-center">
+
+            <a href="" class="symbol symbol-circle symbol-40 mr-4 dropdown" data-toggle="dropdown" data-offset="40px 20px" data-placement="right">
+                <span class="symbol-label" style="background-image: url( '/static/assets/media/a-team/04.jpg')"></span>
+            </a>
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions_user starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/thread_body_actions_user.html" %}
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions_user ends here -->
+            <!-- ===============================================-->
+
+            <div class="d-flex flex-column flex-grow-1 flex-wrap mr-2 dropdown" data-toggle="dropdown" data-offset="40px 20px" data-placement="right">
+                <div class="d-flex">
+                    <a href="" class="font-size-lg font-weight-bolder text-dark-75 mr-2"><span class="text-dark font-weight-bolder font-size-md">FName, <span class="text-muted font-weight-bold">$username</span></span></a>
+                    <div class="font-weight-bold text-muted font-size-md">
+                        <span class="label label-secondary label-dot mr-2"></span>1d
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions_user starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/thread_body_actions_user.html" %}
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions_user ends here -->
+            <!-- ===============================================-->
+
+            <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center" data-inbox="toolbar">
+
+                    <span class="navi-icon mr-0" data-offset="0px 8px" data-toggle="tooltip" data-placement="top" title="Flag">
+                        <a href="" data-toggle="modal" data-target="#flagModal"><span class="svg-icon svg-icon-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"/>
+                                    <path d="M3.5,3 L5,3 L5,19.5 C5,20.3284271 4.32842712,21 3.5,21 L3.5,21 C2.67157288,21 2,20.3284271 2,19.5 L2,4.5 C2,3.67157288 2.67157288,3 3.5,3 Z" fill="#000000"/>
+                                    <path d="M6.99987583,2.99995344 L19.754647,2.99999303 C20.3069317,2.99999474 20.7546456,3.44771138 20.7546439,3.99999613 C20.7546431,4.24703684 20.6631995,4.48533385 20.497938,4.66895776 L17.5,8 L20.4979317,11.3310353 C20.8673908,11.7415453 20.8341123,12.3738351 20.4236023,12.7432941 C20.2399776,12.9085564 20.0016794,13 19.7546376,13 L6.99987583,13 L6.99987583,2.99995344 Z" fill="#000000" opacity="0.3"/>
+                                </g>
+                            </svg>
+                    </span></a>
+                    </span>
+
+                    <!-- ===============================================-->
+                    <!--    thread_body_actions_user_post_flag starts here -->
+                    <!-- ===============================================-->
+
+                    {% include "main/templates/thread_body_actions_user_post_flag.html" %}
+
+                    <!-- ===============================================-->
+                    <!--    thread_body_actions_user_post_flag ends here -->
+                    <!-- ===============================================-->
+
+                </div>
+            </div>
+        </div>
+        <div class="ml-16">
+            <a href="#" class="text-dark-75 font-weight-bold font-size-md">
+			viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus.
+        </a>
+        </div>
+
+        <div class="ml-15 mt-4">
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/thread_body_actions.html" %}
+
+            <!-- ===============================================-->
+            <!--    thread_body_actions ends here -->
+            <!-- ===============================================-->
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===============================================-->
+<!--    thread_body ends here -->
+<!-- ===============================================-->

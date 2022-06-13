@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Messenger</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#2A529F" stop-opacity="0.34298514" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="90" height="90" rx="16"></rect>
+    </defs>
+    <g id="Page-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Inbox_Enterprise_Tuesday-03/03" transform="translate(-415.000000, -1362.000000)">
+            <g id="Messenger" transform="translate(415.000000, 1362.000000)">
+                <g id="Group-16-Copy">
+                    <g id="Rectangle-Copy">
+                        <use fill="#0084FF" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" style="mix-blend-mode: multiply;" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+                <g id="Group-13" transform="translate(17.000000, 17.000000)" fill="#FFFFFF">
+                    <path d="M27.654321,0 C12.0744218,0 0,11.4124208 0,26.8255878 C0,34.8882878 3.30516432,41.8548168 8.68579377,46.6679538 C9.136498,47.0741491 9.40914624,47.6361455 9.43140323,48.2426564 L9.58163798,53.1615155 C9.63171622,54.7306538 11.2509129,55.7489244 12.6864893,55.1201562 L18.1728395,52.6996769 C18.6402365,52.493797 19.1577117,52.4548468 19.6473657,52.5883905 C22.1679708,53.2839305 24.8555034,53.6511757 27.654321,53.6511757 C43.2342201,53.6511757 55.308642,42.2387549 55.308642,26.8255878 C55.308642,11.4124208 43.2342201,0 27.654321,0 Z M44.2580421,20.6380637 L36.1342375,33.5250294 C34.8433316,35.5726992 32.0723352,36.0846167 30.1359764,34.6323291 L23.6758825,29.7858062 C23.0805077,29.3406606 22.2681273,29.3462249 21.6783168,29.7913705 L12.9535733,36.4129116 C11.7906451,37.2976385 10.2660407,35.9009941 11.0505999,34.665715 L19.1744045,21.7787494 C20.4653104,19.7310795 23.2363067,19.2191621 25.1726656,20.6714497 L31.6327595,25.5179726 C32.2281342,25.9631182 33.0405147,25.9575539 33.6303252,25.5124083 L42.3550687,18.8908672 C43.5179969,18.0061403 45.0426013,19.4027846 44.2580421,20.6380637 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

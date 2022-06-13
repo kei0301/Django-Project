@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ===============================================-->
+<!--    header starts here -->
+<!-- ===============================================-->
+
+<title>{% block title %} Invite Friends :: Kenefit {% endblock %}</title>
+{% include "main/templates/header.html" %}
+
+<!-- ===============================================-->
+<!--    header ends here -->
+<!-- ===============================================-->
+
+<div class="d-flex flex-column flex-root">
+    <div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+
+        <!-- ===============================================-->
+        <!--    account_alert starts here -->
+        <!-- ===============================================-->
+
+        <div class="login-content flex-row-fluid d-flex flex-column justify-content-center position-relative overflow-hidden p-7 mx-auto">
+            <div class="d-flex flex-column-fluid flex-center text-center">
+                <div class="login-form login-signup">
+                    <form class="form w-600px" id="">
+                        <div class="text-center pb-8">
+                            <img alt="Logo" src="/static/assets/media/a-logos/logo_primary_letter.png" class="max-h-20px" />
+                        </div>
+                        <div class="pb-4 pt-lg-0 pb-8">
+                            <h3 class="font-weight-boldest text-dark font-size-h2 display-3">Boost your credit score by inviting your friends.
+                            </h3>
+                            <p class="text-muted font-weight-bold font-size-h4">FName, get early access to the world's first social basic income by inviting your peers. Start sharing your invite link with friends!</p>
+                        </div>
+                        <div class="row mb-0">
+                            <div class="col-md-12">
+                                <div class="">
+                                    <input class="form-control form-control-solid h-auto p-6 rounded-lg font-size-h6" type="text" readonly placeholder="Invite Link Here" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <p class="my-6 font-weight-bold font-size-sm text-dark-50">Whenever you share your invite link with someone and they use the link to create a Kenefit account, it helps improve your <code>social credit score</code>, which qualifies you for <code>social basic income</code>.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+            <!-- ===============================================-->
+            <!--    footer starts here -->
+            <!-- ===============================================-->
+
+            {% include "main/templates/footer.html" %}
+
+            <!-- ===============================================-->
+            <!--    footer ends here -->
+            <!-- ===============================================-->
+
+        </div>
+
+        <!-- ===============================================-->
+        <!--    account_alert ends here -->
+        <!-- ===============================================-->
+
+    </div>
+</div>
+
+</html>

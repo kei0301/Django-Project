@@ -1,0 +1,170 @@
+.wizard.wizard-3 .wizard-nav .wizard-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  margin-right: 1.5rem;
+  position: relative;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step:after {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  top: 20px;
+  margin-top: -2px;
+  left: 50%;
+  height: 4px;
+  width: 100%;
+  background-color: #EBEDF3;
+  border-radius: 0.75rem;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step:last-child {
+  margin-right: 0;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step:last-child:after {
+  display: none;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step .wizard-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+  height: 40px;
+  width: 40px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 100%;
+  background-color: #EBEDF3;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step .wizard-label .wizard-number {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #7E8299;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step .wizard-label .wizard-check {
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step .wizard-title {
+  color: #7E8299;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-label {
+  background-color: #1BC5BD;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current] .wizard-label .wizard-number {
+  color: #ffffff;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child:after, .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done]:after {
+  background-color: #1BC5BD;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child .wizard-label, .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label {
+  background-color: #1BC5BD;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child .wizard-label .wizard-number, .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-number {
+  display: none;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child .wizard-label .wizard-check, .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child .wizard-label .wizard-check i, .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-check i {
+  color: #ffffff;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child .wizard-label .wizard-check .svg-icon svg g [fill], .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-check .svg-icon svg g [fill] {
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+  fill: #ffffff;
+}
+.wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=current]:last-child .wizard-label .wizard-check .svg-icon svg:hover g [fill], .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step[data-wizard-state=done] .wizard-label .wizard-check .svg-icon svg:hover g [fill] {
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+@media (max-width: 991.98px) {
+  .wizard.wizard-3 .wizard-nav .wizard-steps {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step:after {
+    display: none;
+  }
+  .wizard.wizard-3 .wizard-nav .wizard-steps .wizard-step .wizard-label {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+}
